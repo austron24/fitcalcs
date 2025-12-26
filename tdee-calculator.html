@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDEE Calculator - Total Daily Energy Expenditure | FitCalcs</title>
+    <meta name="description" content="Free TDEE calculator. Calculate your Total Daily Energy Expenditure to determine how many calories you burn daily.">
+    <meta name="keywords" content="TDEE calculator, total daily energy expenditure, calorie burn, BMR, metabolism calculator">
+    <link rel="canonical" href="https://fitcalcs.xyz/tdee-calculator.html">
+    <style>
+        :root { --primary: #06b6d4; --primary-dark: #0891b2; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .main-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 160px; gap: 20px; }
+        .content-area { display: flex; flex-direction: column; gap: 20px; }
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .card { background: var(--bg-card); border-radius: 16px; padding: 24px; }
+        .card h2 { color: var(--secondary); margin-bottom: 20px; font-size: 1.3rem; }
+        .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-secondary); }
+        input, select { width: 100%; padding: 15px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; background: var(--bg-input); color: var(--text-primary); }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        .result-hero { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 35px; border-radius: 16px; text-align: center; margin: 20px 0; }
+        .result-hero-value { font-size: 3rem; font-weight: 800; color: white; }
+        .result-hero-label { color: rgba(255,255,255,0.8); }
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+        .result-card { background: var(--bg-input); padding: 20px; border-radius: 12px; text-align: center; }
+        .result-value { font-size: 1.3rem; font-weight: 700; color: var(--secondary); }
+        .result-label { color: var(--text-secondary); margin-top: 5px; font-size: 0.85rem; }
+        .activity-item { display: flex; justify-content: space-between; padding: 15px; background: var(--bg-input); border-radius: 8px; margin-bottom: 10px; cursor: pointer; transition: all 0.2s; }
+        .activity-item:hover { background: var(--primary); }
+        .activity-item.selected { background: var(--primary); border: 2px solid var(--secondary); }
+        .related-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 15px; }
+        .related-link { display: block; padding: 12px 16px; background: var(--bg-input); border-radius: 8px; color: var(--text-primary); text-decoration: none; }
+        .related-link:hover { background: var(--primary); }
+        @media (max-width: 968px) { .main-container { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        @media (max-width: 640px) { .form-grid, .results-grid { grid-template-columns: 1fr; } }
+    </style>
+    <script>(function(s){s.dataset.zone='10379224',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</head>
+<body>
+    </div>
+    </div>
+    
+    <header class="header">
+        <h1>🔥 TDEE Calculator</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="content-area">
+            <div class="card">
+                <h2>📊 Your Information</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="number" id="age" value="30" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select id="gender" onchange="calculate()">
+                            <option value="male" selected>Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Weight (lbs)</label>
+                        <input type="number" id="weight" value="170" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Height</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="number" id="feet" value="5" placeholder="ft" style="width: 50%;" oninput="calculate()">
+                            <input type="number" id="inches" value="10" placeholder="in" style="width: 50%;" oninput="calculate()">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Body Fat % (optional)</label>
+                        <input type="number" id="bodyFat" placeholder="Leave blank if unknown" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Formula</label>
+                        <select id="formula" onchange="calculate()">
+                            <option value="mifflin" selected>Mifflin-St Jeor</option>
+                            <option value="harris">Harris-Benedict</option>
+                            <option value="katch">Katch-McArdle</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <h2 style="margin-top: 20px;">🏃 Activity Level</h2>
+                <div id="activityOptions">
+                    <div class="activity-item" onclick="selectActivity(1.2)">
+                        <span>Sedentary</span>
+                        <span style="color: var(--text-secondary);">Little or no exercise</span>
+                    </div>
+                    <div class="activity-item" onclick="selectActivity(1.375)">
+                        <span>Lightly Active</span>
+                        <span style="color: var(--text-secondary);">Exercise 1-3 days/week</span>
+                    </div>
+                    <div class="activity-item selected" onclick="selectActivity(1.55)">
+                        <span>Moderately Active</span>
+                        <span style="color: var(--text-secondary);">Exercise 3-5 days/week</span>
+                    </div>
+                    <div class="activity-item" onclick="selectActivity(1.725)">
+                        <span>Very Active</span>
+                        <span style="color: var(--text-secondary);">Exercise 6-7 days/week</span>
+                    </div>
+                    <div class="activity-item" onclick="selectActivity(1.9)">
+                        <span>Extremely Active</span>
+                        <span style="color: var(--text-secondary);">Athlete/Physical job</span>
+                    </div>
+                </div>
+                
+                <div class="result-hero">
+                    <div class="result-hero-label">Your TDEE</div>
+                    <div class="result-hero-value" id="tdee">0</div>
+                    <div style="color: rgba(255,255,255,0.7); margin-top: 10px;">calories per day</div>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value" id="bmr">0</div>
+                        <div class="result-label">BMR</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="loseCals">0</div>
+                        <div class="result-label">To Lose Weight</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="gainCals">0</div>
+                        <div class="result-label">To Gain Weight</div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="card">
+                <h2>🔗 Related Tools</h2>
+                <div class="related-tools">
+                    <a href="calorie-calculator.html" class="related-link">🔥 Calorie Calculator</a>
+                    <a href="macro-calculator.html" class="related-link">📊 Macro Calculator</a>
+                    <a href="bmi-calculator.html" class="related-link">⚖️ BMI Calculator</a>
+                    <a href="body-fat-calculator.html" class="related-link">📏 Body Fat Calculator</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let activityMultiplier = 1.55;
+        
+        function selectActivity(multiplier) {
+            activityMultiplier = multiplier;
+            document.querySelectorAll('.activity-item').forEach(item => item.classList.remove('selected'));
+            event.currentTarget.classList.add('selected');
+            calculate();
+        }
+        
+        function calculate() {
+            const age = parseInt(document.getElementById('age').value) || 30;
+            const gender = document.getElementById('gender').value;
+            const weight = parseFloat(document.getElementById('weight').value) || 170;
+            const feet = parseInt(document.getElementById('feet').value) || 5;
+            const inches = parseInt(document.getElementById('inches').value) || 10;
+            const bodyFat = parseFloat(document.getElementById('bodyFat').value);
+            const formula = document.getElementById('formula').value;
+            
+            const weightKg = weight * 0.453592;
+            const heightCm = (feet * 12 + inches) * 2.54;
+            
+            let bmr;
+            
+            if (formula === 'katch' && !isNaN(bodyFat)) {
+                const lbm = weightKg * (1 - bodyFat / 100);
+                bmr = 370 + (21.6 * lbm);
+            } else if (formula === 'harris') {
+                if (gender === 'male') {
+                    bmr = 88.362 + (13.397 * weightKg) + (4.799 * heightCm) - (5.677 * age);
+                } else {
+                    bmr = 447.593 + (9.247 * weightKg) + (3.098 * heightCm) - (4.330 * age);
+                }
+            } else {
+                if (gender === 'male') {
+                    bmr = 10 * weightKg + 6.25 * heightCm - 5 * age + 5;
+                } else {
+                    bmr = 10 * weightKg + 6.25 * heightCm - 5 * age - 161;
+                }
+            }
+            
+            const tdee = bmr * activityMultiplier;
+            
+            document.getElementById('bmr').textContent = Math.round(bmr).toLocaleString();
+            document.getElementById('tdee').textContent = Math.round(tdee).toLocaleString();
+            document.getElementById('loseCals').textContent = Math.round(tdee - 500).toLocaleString();
+            document.getElementById('gainCals').textContent = Math.round(tdee + 300).toLocaleString();
+        }
+        
+        calculate();
+    </script>
+</body>
+</html>

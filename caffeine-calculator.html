@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffeine Calculator - Daily Intake & Half-Life Tracker | FitCalcs</title>
+    <meta name="description" content="Free caffeine calculator. Track your daily caffeine intake, see when it wears off, and calculate safe consumption limits based on your weight.">
+    <meta name="keywords" content="caffeine calculator, coffee calculator, caffeine tracker, caffeine half-life, safe caffeine limit">
+    <link rel="canonical" href="https://fitcalcs.xyz/caffeine-calculator.html">
+    <style>
+        :root { --primary: #78350f; --primary-dark: #451a03; --secondary: #22d3ee; --accent: #fbbf24; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; --warning: #f59e0b; --danger: #ef4444; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .main-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 160px; gap: 20px; }
+        .content-area { display: flex; flex-direction: column; gap: 20px; }
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .card { background: var(--bg-card); border-radius: 16px; padding: 24px; }
+        .card h2 { color: var(--secondary); margin-bottom: 20px; font-size: 1.3rem; }
+        .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-secondary); }
+        input, select { width: 100%; padding: 15px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; background: var(--bg-input); color: var(--text-primary); }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        .result-hero { padding: 40px; border-radius: 16px; text-align: center; margin: 20px 0; }
+        .result-hero.safe { background: linear-gradient(135deg, var(--success), #047857); }
+        .result-hero.moderate { background: linear-gradient(135deg, var(--warning), #d97706); }
+        .result-hero.high { background: linear-gradient(135deg, var(--danger), #b91c1c); }
+        .result-hero-value { font-size: 4rem; font-weight: 800; color: white; }
+        .result-hero-label { color: rgba(255,255,255,0.9); font-size: 1.2rem; }
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+        .result-card { background: var(--bg-input); padding: 20px; border-radius: 12px; text-align: center; }
+        .result-value { font-size: 1.5rem; font-weight: 700; color: var(--secondary); }
+        .result-label { color: var(--text-secondary); margin-top: 5px; font-size: 0.85rem; }
+        .drink-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+        .drink-btn { padding: 15px 10px; background: var(--bg-input); border: 2px solid var(--border); border-radius: 10px; color: var(--text-primary); cursor: pointer; text-align: center; font-size: 0.9rem; }
+        .drink-btn:hover { background: var(--primary); border-color: var(--primary); }
+        .drink-btn .emoji { font-size: 1.5rem; display: block; margin-bottom: 5px; }
+        .drink-btn .mg { font-size: 0.75rem; color: var(--accent); }
+        .timeline { margin-top: 20px; }
+        .timeline-item { display: flex; justify-content: space-between; padding: 10px 15px; background: var(--bg-input); border-radius: 8px; margin-bottom: 8px; }
+        .info-box { background: var(--bg-input); padding: 15px; border-radius: 10px; margin-top: 15px; border-left: 4px solid var(--accent); }
+        .related-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 15px; }
+        .related-link { display: block; padding: 12px 16px; background: var(--bg-input); border-radius: 8px; color: var(--text-primary); text-decoration: none; }
+        .related-link:hover { background: var(--primary); }
+        @media (max-width: 968px) { .main-container { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        @media (max-width: 640px) { .form-grid, .drink-grid { grid-template-columns: repeat(2, 1fr); } .results-grid { grid-template-columns: 1fr; } }
+    </style>
+    <script>(function(s){s.dataset.zone='10379224',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</head>
+<body>
+    </div>
+    </div>
+
+    <header class="header">
+        <h1>☕ Caffeine Calculator</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="content-area">
+            <div class="card">
+                <h2>🥤 Add Drinks</h2>
+                <div class="drink-grid">
+                    <button class="drink-btn" onclick="addDrink(95)">
+                        <span class="emoji">☕</span>
+                        Coffee (8oz)
+                        <span class="mg">95mg</span>
+                    </button>
+                    <button class="drink-btn" onclick="addDrink(165)">
+                        <span class="emoji">☕</span>
+                        Large Coffee
+                        <span class="mg">165mg</span>
+                    </button>
+                    <button class="drink-btn" onclick="addDrink(63)">
+                        <span class="emoji">☕</span>
+                        Espresso
+                        <span class="mg">63mg</span>
+                    </button>
+                    <button class="drink-btn" onclick="addDrink(47)">
+                        <span class="emoji">🍵</span>
+                        Green Tea
+                        <span class="mg">47mg</span>
+                    </button>
+                    <button class="drink-btn" onclick="addDrink(34)">
+                        <span class="emoji">🫖</span>
+                        Black Tea
+                        <span class="mg">34mg</span>
+                    </button>
+                    <button class="drink-btn" onclick="addDrink(80)">
+                        <span class="emoji">🥤</span>
+                        Energy Drink
+                        <span class="mg">80mg</span>
+                    </button>
+                    <button class="drink-btn" onclick="addDrink(46)">
+                        <span class="emoji">🥤</span>
+                        Cola (12oz)
+                        <span class="mg">46mg</span>
+                    </button>
+                    <button class="drink-btn" onclick="addDrink(200)">
+                        <span class="emoji">💊</span>
+                        Caffeine Pill
+                        <span class="mg">200mg</span>
+                    </button>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Your Weight</label>
+                        <input type="number" id="weight" value="160" step="5" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Weight Unit</label>
+                        <select id="weightUnit" onchange="calculate()">
+                            <option value="lbs">Pounds (lbs)</option>
+                            <option value="kg">Kilograms (kg)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Custom Amount (mg)</label>
+                        <input type="number" id="customAmount" value="0" step="10" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Time Consumed</label>
+                        <input type="time" id="timeConsumed" oninput="calculate()">
+                    </div>
+                </div>
+
+                <div class="result-hero safe" id="resultHero">
+                    <div class="result-hero-label">Daily Caffeine Intake</div>
+                    <div class="result-hero-value" id="totalCaffeine">0 mg</div>
+                    <div id="caffeineStatus" style="margin-top: 10px;"></div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value" id="safeLimit">400 mg</div>
+                        <div class="result-label">Your Safe Daily Limit</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="remaining">400 mg</div>
+                        <div class="result-label">Remaining Today</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="halfLife">--</div>
+                        <div class="result-label">Wears Off By</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>⏰ Caffeine Timeline</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">Caffeine half-life is ~5 hours. Here's how it leaves your system:</p>
+                <div class="timeline" id="timeline">
+                    <div class="timeline-item"><span>Now</span><span id="now">0 mg</span></div>
+                    <div class="timeline-item"><span>+2 hours</span><span id="h2">0 mg</span></div>
+                    <div class="timeline-item"><span>+5 hours (half-life)</span><span id="h5">0 mg</span></div>
+                    <div class="timeline-item"><span>+10 hours</span><span id="h10">0 mg</span></div>
+                    <div class="timeline-item"><span>+15 hours</span><span id="h15">0 mg</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📖 Caffeine Guide</h2>
+                <div class="info-box">
+                    <strong>Safe Limits:</strong><br>
+                    • Adults: Up to 400mg/day (~4 cups coffee)<br>
+                    • Pregnant: Max 200mg/day<br>
+                    • Teens: Max 100mg/day
+                </div>
+                <div class="info-box" style="margin-top: 15px;">
+                    <strong>Sleep Tip:</strong> Stop caffeine 6-8 hours before bedtime for better sleep quality.
+                </div>
+            </div>
+
+            </div>
+
+            <div class="card">
+                <h2>🔗 Related Tools</h2>
+                <div class="related-tools">
+                    <a href="calorie-calculator.html" class="related-link">🔥 Calorie Calculator</a>
+                    <a href="water-intake-calculator.html" class="related-link">💧 Water Intake</a>
+                    <a href="sleep-calculator.html" class="related-link">😴 Sleep Calculator</a>
+                    <a href="bmi-calculator.html" class="related-link">⚖️ BMI Calculator</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let totalCaffeine = 0;
+        
+        // Set current time
+        const now = new Date();
+        document.getElementById('timeConsumed').value = 
+            String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+        
+        function addDrink(mg) {
+            totalCaffeine += mg;
+            document.getElementById('customAmount').value = totalCaffeine;
+            calculate();
+        }
+
+        function calculate() {
+            let weight = parseFloat(document.getElementById('weight').value) || 160;
+            const weightUnit = document.getElementById('weightUnit').value;
+            const customAmount = parseFloat(document.getElementById('customAmount').value) || 0;
+            
+            totalCaffeine = customAmount;
+            
+            const weightKg = weightUnit === 'lbs' ? weight * 0.453592 : weight;
+            
+            // Safe limit: ~6mg per kg of body weight, capped at 400mg
+            const safeLimit = Math.min(400, Math.round(weightKg * 6));
+            const remaining = Math.max(0, safeLimit - totalCaffeine);
+            
+            // Caffeine half-life calculations (5 hours)
+            const halfLife = 5;
+            const h2 = totalCaffeine * Math.pow(0.5, 2/halfLife);
+            const h5 = totalCaffeine * 0.5;
+            const h10 = totalCaffeine * 0.25;
+            const h15 = totalCaffeine * 0.125;
+            
+            // Time when caffeine drops below 20mg
+            const hoursToWearOff = totalCaffeine > 0 ? Math.log(20/totalCaffeine) / Math.log(0.5) * halfLife : 0;
+            const wearOffTime = new Date();
+            wearOffTime.setHours(wearOffTime.getHours() + Math.max(0, hoursToWearOff));
+            
+            const hero = document.getElementById('resultHero');
+            const statusEl = document.getElementById('caffeineStatus');
+            
+            if (totalCaffeine <= safeLimit * 0.5) {
+                hero.className = 'result-hero safe';
+                statusEl.textContent = '✓ Low - Well within safe limits';
+            } else if (totalCaffeine <= safeLimit) {
+                hero.className = 'result-hero moderate';
+                statusEl.textContent = '⚠️ Moderate - Approaching daily limit';
+            } else {
+                hero.className = 'result-hero high';
+                statusEl.textContent = '🚫 High - Exceeds recommended daily limit';
+            }
+            
+            document.getElementById('totalCaffeine').textContent = totalCaffeine + ' mg';
+            document.getElementById('safeLimit').textContent = safeLimit + ' mg';
+            document.getElementById('remaining').textContent = remaining + ' mg';
+            document.getElementById('halfLife').textContent = totalCaffeine > 20 ? 
+                wearOffTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }) : '--';
+            
+            document.getElementById('now').textContent = totalCaffeine + ' mg';
+            document.getElementById('h2').textContent = Math.round(h2) + ' mg';
+            document.getElementById('h5').textContent = Math.round(h5) + ' mg';
+            document.getElementById('h10').textContent = Math.round(h10) + ' mg';
+            document.getElementById('h15').textContent = Math.round(h15) + ' mg';
+        }
+        
+        calculate();
+    </script>
+</body>
+</html>

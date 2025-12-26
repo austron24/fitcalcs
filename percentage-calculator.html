@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator - Calculate Percentages Easily | FitCalcs</title>
+    <meta name="description" content="Free percentage calculator. Calculate what percent of a number, percentage increase/decrease, and more.">
+    <meta name="keywords" content="percentage calculator, percent calculator, calculate percentage, percent of number, percentage change">
+    <link rel="canonical" href="https://fitcalcs.xyz/percentage-calculator.html">
+    <style>
+        :root { --primary: #10b981; --primary-dark: #059669; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .main-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 160px; gap: 20px; }
+        .content-area { display: flex; flex-direction: column; gap: 20px; }
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .card { background: var(--bg-card); border-radius: 16px; padding: 24px; }
+        .card h2 { color: var(--secondary); margin-bottom: 20px; font-size: 1.3rem; }
+        .calc-row { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .calc-row span { color: var(--text-secondary); }
+        input { padding: 12px; border: 2px solid var(--border); border-radius: 8px; font-size: 1rem; background: var(--bg-input); color: var(--text-primary); width: 100px; }
+        input:focus { outline: none; border-color: var(--primary); }
+        .result-box { background: var(--primary); color: white; padding: 12px 20px; border-radius: 8px; font-weight: 700; font-size: 1.1rem; min-width: 100px; text-align: center; }
+        .related-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 15px; }
+        .related-link { display: block; padding: 12px 16px; background: var(--bg-input); border-radius: 8px; color: var(--text-primary); text-decoration: none; }
+        .related-link:hover { background: var(--primary); }
+        @media (max-width: 968px) { .main-container { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        @media (max-width: 640px) { .calc-row { flex-direction: column; align-items: flex-start; } input { width: 100%; } }
+    </style>
+    <script>(function(s){s.dataset.zone='10379224',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</head>
+<body>
+    </div>
+    </div>
+
+    <header class="header">
+        <h1>📊 Percentage Calculator</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="content-area">
+            <div class="card">
+                <h2>🔢 What is X% of Y?</h2>
+                <div class="calc-row">
+                    <span>What is</span>
+                    <input type="number" id="pct1" value="25" oninput="calc1()">
+                    <span>% of</span>
+                    <input type="number" id="num1" value="200" oninput="calc1()">
+                    <span>=</span>
+                    <div class="result-box" id="result1">50</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🔢 X is what % of Y?</h2>
+                <div class="calc-row">
+                    <input type="number" id="num2a" value="50" oninput="calc2()">
+                    <span>is what % of</span>
+                    <input type="number" id="num2b" value="200" oninput="calc2()">
+                    <span>=</span>
+                    <div class="result-box" id="result2">25%</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🔢 X is Y% of what?</h2>
+                <div class="calc-row">
+                    <input type="number" id="num3a" value="50" oninput="calc3()">
+                    <span>is</span>
+                    <input type="number" id="pct3" value="25" oninput="calc3()">
+                    <span>% of what? =</span>
+                    <div class="result-box" id="result3">200</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📈 Percentage Change</h2>
+                <div class="calc-row">
+                    <span>From</span>
+                    <input type="number" id="from" value="100" oninput="calc4()">
+                    <span>to</span>
+                    <input type="number" id="to" value="125" oninput="calc4()">
+                    <span>=</span>
+                    <div class="result-box" id="result4">+25%</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📉 Percentage Difference</h2>
+                <div class="calc-row">
+                    <span>Between</span>
+                    <input type="number" id="diff1" value="80" oninput="calc5()">
+                    <span>and</span>
+                    <input type="number" id="diff2" value="100" oninput="calc5()">
+                    <span>=</span>
+                    <div class="result-box" id="result5">22.2%</div>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="card">
+                <h2>🔗 Related Tools</h2>
+                <div class="related-tools">
+                    <a href="discount-calculator.html" class="related-link">🏷️ Discount</a>
+                    <a href="tip-calculator.html" class="related-link">💵 Tip</a>
+                    <a href="grade-calculator.html" class="related-link">📝 Grade</a>
+                    <a href="markup-calculator.html" class="related-link">📈 Markup</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calc1() {
+            const pct = parseFloat(document.getElementById('pct1').value) || 0;
+            const num = parseFloat(document.getElementById('num1').value) || 0;
+            document.getElementById('result1').textContent = (pct / 100 * num).toFixed(2);
+        }
+
+        function calc2() {
+            const a = parseFloat(document.getElementById('num2a').value) || 0;
+            const b = parseFloat(document.getElementById('num2b').value) || 1;
+            document.getElementById('result2').textContent = (a / b * 100).toFixed(2) + '%';
+        }
+
+        function calc3() {
+            const a = parseFloat(document.getElementById('num3a').value) || 0;
+            const pct = parseFloat(document.getElementById('pct3').value) || 1;
+            document.getElementById('result3').textContent = (a / (pct / 100)).toFixed(2);
+        }
+
+        function calc4() {
+            const from = parseFloat(document.getElementById('from').value) || 1;
+            const to = parseFloat(document.getElementById('to').value) || 0;
+            const change = ((to - from) / from) * 100;
+            document.getElementById('result4').textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
+        }
+
+        function calc5() {
+            const a = parseFloat(document.getElementById('diff1').value) || 0;
+            const b = parseFloat(document.getElementById('diff2').value) || 0;
+            const avg = (a + b) / 2;
+            const diff = Math.abs(a - b) / avg * 100;
+            document.getElementById('result5').textContent = diff.toFixed(2) + '%';
+        }
+
+        calc1(); calc2(); calc3(); calc4(); calc5();
+    </script>
+</body>
+</html>

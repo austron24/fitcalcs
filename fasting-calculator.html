@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasting Calculator - Track Your Intermittent Fasting | FitCalcs</title>
+    <meta name="description" content="Free fasting calculator. Track intermittent fasting windows, calculate fasting zones, and see when you enter fat burning and autophagy states.">
+    <meta name="keywords" content="fasting calculator, intermittent fasting, IF calculator, fasting timer, autophagy calculator">
+    <link rel="canonical" href="https://fitcalcs.xyz/fasting-calculator.html">
+    <style>
+        :root { --primary: #10b981; --primary-dark: #059669; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .main-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 160px; gap: 20px; }
+        .content-area { display: flex; flex-direction: column; gap: 20px; }
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .card { background: var(--bg-card); border-radius: 16px; padding: 24px; }
+        .card h2 { color: var(--secondary); margin-bottom: 20px; font-size: 1.3rem; }
+        .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-secondary); }
+        input, select { width: 100%; padding: 15px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; background: var(--bg-input); color: var(--text-primary); }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        .result-hero { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 40px; border-radius: 16px; text-align: center; margin: 20px 0; }
+        .result-hero-value { font-size: 3rem; font-weight: 800; color: white; }
+        .result-hero-label { color: rgba(255,255,255,0.9); font-size: 1.2rem; }
+        .timeline { position: relative; padding: 20px 0; }
+        .timeline-bar { height: 30px; background: var(--bg-input); border-radius: 15px; position: relative; overflow: hidden; margin: 20px 0; }
+        .timeline-progress { height: 100%; border-radius: 15px; transition: width 0.3s; }
+        .zone-card { background: var(--bg-input); padding: 15px; border-radius: 12px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .zone-name { font-weight: bold; }
+        .zone-time { color: var(--text-secondary); }
+        .zone-status { padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
+        .zone-status.active { background: var(--success); color: white; }
+        .zone-status.upcoming { background: var(--border); color: var(--text-secondary); }
+        .zone-status.completed { background: var(--primary-dark); color: white; }
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+        .result-card { background: var(--bg-input); padding: 20px; border-radius: 12px; text-align: center; }
+        .result-value { font-size: 1.5rem; font-weight: 700; color: var(--secondary); }
+        .result-label { color: var(--text-secondary); margin-top: 5px; font-size: 0.85rem; }
+        .protocol-btn { padding: 12px 20px; background: var(--bg-input); border: 2px solid var(--border); border-radius: 10px; color: var(--text-primary); cursor: pointer; transition: all 0.3s; }
+        .protocol-btn:hover, .protocol-btn.active { background: var(--primary); border-color: var(--primary); }
+        .protocols { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+        .related-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 15px; }
+        .related-link { display: block; padding: 12px 16px; background: var(--bg-input); border-radius: 8px; color: var(--text-primary); text-decoration: none; }
+        .related-link:hover { background: var(--primary); }
+        @media (max-width: 968px) { .main-container { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        @media (max-width: 640px) { .form-grid, .results-grid { grid-template-columns: 1fr; } }
+    </style>
+    <script>(function(s){s.dataset.zone='10379224',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</head>
+<body>
+    </div>
+    </div>
+
+    <header class="header">
+        <h1>⏰ Fasting Calculator</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="content-area">
+            <div class="card">
+                <h2>🍽️ Choose Your Fasting Protocol</h2>
+                <div class="protocols">
+                    <button class="protocol-btn active" onclick="setProtocol(16, 8)">16:8</button>
+                    <button class="protocol-btn" onclick="setProtocol(18, 6)">18:6</button>
+                    <button class="protocol-btn" onclick="setProtocol(20, 4)">20:4</button>
+                    <button class="protocol-btn" onclick="setProtocol(24, 0)">OMAD (24)</button>
+                    <button class="protocol-btn" onclick="setProtocol(36, 0)">36-Hour</button>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Fasting Hours</label>
+                        <input type="number" id="fastingHours" value="16" min="1" max="72" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Eating Window (hours)</label>
+                        <input type="number" id="eatingWindow" value="8" min="0" max="12" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Meal Time</label>
+                        <input type="time" id="lastMeal" value="20:00" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Current Time</label>
+                        <input type="time" id="currentTime" value="12:00" oninput="calculate()">
+                    </div>
+                </div>
+
+                <div class="result-hero">
+                    <div class="result-hero-label">Hours Fasted</div>
+                    <div class="result-hero-value" id="hoursFasted">0h</div>
+                    <div id="fastingStatus" style="margin-top: 10px;"></div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value" id="percentComplete">0%</div>
+                        <div class="result-label">Fast Complete</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="timeRemaining">0h</div>
+                        <div class="result-label">Time Remaining</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="nextMeal">--:--</div>
+                        <div class="result-label">Next Meal Window</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🔥 Fasting Zones</h2>
+                <div class="zone-card">
+                    <div>
+                        <div class="zone-name">🍞 Fed State</div>
+                        <div class="zone-time">0-4 hours</div>
+                    </div>
+                    <div class="zone-status" id="zone1">Upcoming</div>
+                </div>
+                <div class="zone-card">
+                    <div>
+                        <div class="zone-name">🔄 Early Fasting</div>
+                        <div class="zone-time">4-8 hours</div>
+                    </div>
+                    <div class="zone-status" id="zone2">Upcoming</div>
+                </div>
+                <div class="zone-card">
+                    <div>
+                        <div class="zone-name">🔥 Fat Burning</div>
+                        <div class="zone-time">8-12 hours</div>
+                    </div>
+                    <div class="zone-status" id="zone3">Upcoming</div>
+                </div>
+                <div class="zone-card">
+                    <div>
+                        <div class="zone-name">⚡ Ketosis</div>
+                        <div class="zone-time">12-18 hours</div>
+                    </div>
+                    <div class="zone-status" id="zone4">Upcoming</div>
+                </div>
+                <div class="zone-card">
+                    <div>
+                        <div class="zone-name">✨ Deep Ketosis</div>
+                        <div class="zone-time">18-24 hours</div>
+                    </div>
+                    <div class="zone-status" id="zone5">Upcoming</div>
+                </div>
+                <div class="zone-card">
+                    <div>
+                        <div class="zone-name">🧬 Autophagy</div>
+                        <div class="zone-time">24+ hours</div>
+                    </div>
+                    <div class="zone-status" id="zone6">Upcoming</div>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="card">
+                <h2>🔗 Related Tools</h2>
+                <div class="related-tools">
+                    <a href="calorie-calculator.html" class="related-link">🔥 Calorie Calculator</a>
+                    <a href="keto-calculator.html" class="related-link">🥑 Keto Calculator</a>
+                    <a href="net-carbs-calculator.html" class="related-link">🥬 Net Carbs</a>
+                    <a href="macronutrient-calculator.html" class="related-link">🥗 Macro Calculator</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setProtocol(fasting, eating) {
+            document.getElementById('fastingHours').value = fasting;
+            document.getElementById('eatingWindow').value = eating;
+            document.querySelectorAll('.protocol-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            calculate();
+        }
+
+        function calculate() {
+            const fastingHours = parseInt(document.getElementById('fastingHours').value) || 16;
+            const lastMeal = document.getElementById('lastMeal').value;
+            const currentTime = document.getElementById('currentTime').value;
+            
+            const [lastH, lastM] = lastMeal.split(':').map(Number);
+            const [currH, currM] = currentTime.split(':').map(Number);
+            
+            let lastMinutes = lastH * 60 + lastM;
+            let currentMinutes = currH * 60 + currM;
+            
+            if (currentMinutes < lastMinutes) {
+                currentMinutes += 24 * 60;
+            }
+            
+            const minutesFasted = currentMinutes - lastMinutes;
+            const hoursFasted = minutesFasted / 60;
+            const percentComplete = Math.min(100, (hoursFasted / fastingHours) * 100);
+            const hoursRemaining = Math.max(0, fastingHours - hoursFasted);
+            
+            const nextMealMinutes = (lastMinutes + fastingHours * 60) % (24 * 60);
+            const nextMealH = Math.floor(nextMealMinutes / 60);
+            const nextMealM = nextMealMinutes % 60;
+            
+            document.getElementById('hoursFasted').textContent = hoursFasted.toFixed(1) + 'h';
+            document.getElementById('percentComplete').textContent = percentComplete.toFixed(0) + '%';
+            document.getElementById('timeRemaining').textContent = hoursRemaining.toFixed(1) + 'h';
+            document.getElementById('nextMeal').textContent = 
+                String(nextMealH).padStart(2, '0') + ':' + String(Math.floor(nextMealM)).padStart(2, '0');
+            
+            const statusEl = document.getElementById('fastingStatus');
+            if (percentComplete >= 100) {
+                statusEl.textContent = '✓ Fast Complete! You can eat now.';
+            } else {
+                statusEl.textContent = '⏳ Keep going! ' + hoursRemaining.toFixed(1) + ' hours left.';
+            }
+            
+            // Update zones
+            const zones = [
+                { id: 'zone1', start: 0, end: 4 },
+                { id: 'zone2', start: 4, end: 8 },
+                { id: 'zone3', start: 8, end: 12 },
+                { id: 'zone4', start: 12, end: 18 },
+                { id: 'zone5', start: 18, end: 24 },
+                { id: 'zone6', start: 24, end: 999 }
+            ];
+            
+            zones.forEach(zone => {
+                const el = document.getElementById(zone.id);
+                if (hoursFasted >= zone.end) {
+                    el.textContent = 'Completed';
+                    el.className = 'zone-status completed';
+                } else if (hoursFasted >= zone.start) {
+                    el.textContent = 'Active';
+                    el.className = 'zone-status active';
+                } else {
+                    el.textContent = 'Upcoming';
+                    el.className = 'zone-status upcoming';
+                }
+            });
+        }
+        
+        // Set current time
+        const now = new Date();
+        document.getElementById('currentTime').value = 
+            String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+        calculate();
+    </script>
+</body>
+</html>

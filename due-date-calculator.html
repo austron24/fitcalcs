@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Due Date Calculator - Project & Task Deadline Planner | FitCalcs</title>
+    <meta name="description" content="Free due date calculator. Calculate deadlines, work back from due dates, and plan project timelines with business day calculations.">
+    <meta name="keywords" content="due date calculator, deadline calculator, project timeline, business days calculator, work back schedule">
+    <link rel="canonical" href="https://fitcalcs.xyz/due-date-calculator.html">
+    <style>
+        :root { --primary: #8b5cf6; --primary-dark: #7c3aed; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .main-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 160px; gap: 20px; }
+        .content-area { display: flex; flex-direction: column; gap: 20px; }
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .card { background: var(--bg-card); border-radius: 16px; padding: 24px; }
+        .card h2 { color: var(--secondary); margin-bottom: 20px; font-size: 1.3rem; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+        .tab { padding: 12px 24px; background: var(--bg-input); border: none; border-radius: 8px; color: var(--text-primary); cursor: pointer; font-size: 1rem; }
+        .tab.active { background: var(--primary); }
+        .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-secondary); }
+        input, select { width: 100%; padding: 15px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; background: var(--bg-input); color: var(--text-primary); }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        .result-hero { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 40px; border-radius: 16px; text-align: center; margin: 20px 0; }
+        .result-hero-value { font-size: 2rem; font-weight: 800; color: white; }
+        .result-hero-label { color: rgba(255,255,255,0.9); font-size: 1.2rem; }
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+        .result-card { background: var(--bg-input); padding: 20px; border-radius: 12px; text-align: center; }
+        .result-value { font-size: 1.5rem; font-weight: 700; color: var(--secondary); }
+        .result-label { color: var(--text-secondary); margin-top: 5px; font-size: 0.85rem; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .related-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 15px; }
+        .related-link { display: block; padding: 12px 16px; background: var(--bg-input); border-radius: 8px; color: var(--text-primary); text-decoration: none; }
+        .related-link:hover { background: var(--primary); }
+        @media (max-width: 968px) { .main-container { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        @media (max-width: 640px) { .form-grid, .results-grid { grid-template-columns: 1fr; } .tabs { flex-direction: column; } }
+    </style>
+    <script>(function(s){s.dataset.zone='10379224',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</head>
+<body>
+    </div>
+    </div>
+
+    <header class="header">
+        <h1>📅 Due Date Calculator</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="content-area">
+            <div class="card">
+                <div class="tabs">
+                    <button class="tab active" onclick="switchTab('add')">Add Days</button>
+                    <button class="tab" onclick="switchTab('workback')">Work Back</button>
+                    <button class="tab" onclick="switchTab('between')">Days Between</button>
+                </div>
+
+                <div id="addTab" class="tab-content active">
+                    <h2>➕ Add Days to Date</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Start Date</label>
+                            <input type="date" id="addStart" onchange="calculateAdd()">
+                        </div>
+                        <div class="form-group">
+                            <label>Days to Add</label>
+                            <input type="number" id="addDays" value="30" min="1" oninput="calculateAdd()">
+                        </div>
+                        <div class="form-group">
+                            <label>Day Type</label>
+                            <select id="addType" onchange="calculateAdd()">
+                                <option value="calendar">Calendar Days</option>
+                                <option value="business">Business Days Only</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="result-hero">
+                        <div class="result-hero-label">Due Date</div>
+                        <div class="result-hero-value" id="addResult">-</div>
+                    </div>
+                </div>
+
+                <div id="workbackTab" class="tab-content">
+                    <h2>⏪ Work Back from Due Date</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Due Date</label>
+                            <input type="date" id="workDue" onchange="calculateWorkback()">
+                        </div>
+                        <div class="form-group">
+                            <label>Days to Work Back</label>
+                            <input type="number" id="workDays" value="14" min="1" oninput="calculateWorkback()">
+                        </div>
+                        <div class="form-group">
+                            <label>Day Type</label>
+                            <select id="workType" onchange="calculateWorkback()">
+                                <option value="calendar">Calendar Days</option>
+                                <option value="business">Business Days Only</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="result-hero">
+                        <div class="result-hero-label">Start By Date</div>
+                        <div class="result-hero-value" id="workResult">-</div>
+                    </div>
+                </div>
+
+                <div id="betweenTab" class="tab-content">
+                    <h2>📊 Days Between Dates</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Start Date</label>
+                            <input type="date" id="betweenStart" onchange="calculateBetween()">
+                        </div>
+                        <div class="form-group">
+                            <label>End Date</label>
+                            <input type="date" id="betweenEnd" onchange="calculateBetween()">
+                        </div>
+                    </div>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="result-value" id="calendarDays">0</div>
+                            <div class="result-label">Calendar Days</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-value" id="businessDays">0</div>
+                            <div class="result-label">Business Days</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-value" id="weekendDays">0</div>
+                            <div class="result-label">Weekend Days</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="card">
+                <h2>🔗 Related Tools</h2>
+                <div class="related-tools">
+                    <a href="date-calculator.html" class="related-link">📆 Date Calculator</a>
+                    <a href="age-calculator.html" class="related-link">🎂 Age Calculator</a>
+                    <a href="time-calculator.html" class="related-link">⏰ Time Calculator</a>
+                    <a href="pregnancy-calculator.html" class="related-link">🤰 Pregnancy</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default dates
+        const today = new Date();
+        document.getElementById('addStart').valueAsDate = today;
+        document.getElementById('workDue').valueAsDate = new Date(today.getTime() + 30*24*60*60*1000);
+        document.getElementById('betweenStart').valueAsDate = today;
+        document.getElementById('betweenEnd').valueAsDate = new Date(today.getTime() + 30*24*60*60*1000);
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(tab + 'Tab').classList.add('active');
+        }
+
+        function isWeekend(date) {
+            const day = date.getDay();
+            return day === 0 || day === 6;
+        }
+
+        function addBusinessDays(startDate, days) {
+            let current = new Date(startDate);
+            let added = 0;
+            while (added < days) {
+                current.setDate(current.getDate() + 1);
+                if (!isWeekend(current)) added++;
+            }
+            return current;
+        }
+
+        function subtractBusinessDays(endDate, days) {
+            let current = new Date(endDate);
+            let subtracted = 0;
+            while (subtracted < days) {
+                current.setDate(current.getDate() - 1);
+                if (!isWeekend(current)) subtracted++;
+            }
+            return current;
+        }
+
+        function formatDate(date) {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
+        }
+
+        function calculateAdd() {
+            const start = new Date(document.getElementById('addStart').value);
+            const days = parseInt(document.getElementById('addDays').value) || 0;
+            const type = document.getElementById('addType').value;
+
+            if (isNaN(start.getTime())) return;
+
+            let result;
+            if (type === 'business') {
+                result = addBusinessDays(start, days);
+            } else {
+                result = new Date(start);
+                result.setDate(result.getDate() + days);
+            }
+
+            document.getElementById('addResult').textContent = formatDate(result);
+        }
+
+        function calculateWorkback() {
+            const due = new Date(document.getElementById('workDue').value);
+            const days = parseInt(document.getElementById('workDays').value) || 0;
+            const type = document.getElementById('workType').value;
+
+            if (isNaN(due.getTime())) return;
+
+            let result;
+            if (type === 'business') {
+                result = subtractBusinessDays(due, days);
+            } else {
+                result = new Date(due);
+                result.setDate(result.getDate() - days);
+            }
+
+            document.getElementById('workResult').textContent = formatDate(result);
+        }
+
+        function calculateBetween() {
+            const start = new Date(document.getElementById('betweenStart').value);
+            const end = new Date(document.getElementById('betweenEnd').value);
+
+            if (isNaN(start.getTime()) || isNaN(end.getTime())) return;
+
+            const msPerDay = 24 * 60 * 60 * 1000;
+            const calendarDays = Math.round((end - start) / msPerDay);
+
+            let businessDays = 0;
+            let weekendDays = 0;
+            let current = new Date(start);
+            while (current < end) {
+                current.setDate(current.getDate() + 1);
+                if (isWeekend(current)) {
+                    weekendDays++;
+                } else {
+                    businessDays++;
+                }
+            }
+
+            document.getElementById('calendarDays').textContent = calendarDays;
+            document.getElementById('businessDays').textContent = businessDays;
+            document.getElementById('weekendDays').textContent = weekendDays;
+        }
+
+        // Initial calculations
+        calculateAdd();
+        calculateWorkback();
+        calculateBetween();
+    </script>
+</body>
+</html>

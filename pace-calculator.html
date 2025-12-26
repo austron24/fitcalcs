@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pace Calculator - Running & Walking Pace | FitCalcs</title>
+    <meta name="description" content="Free pace calculator. Convert between pace, speed, and finish times for running and walking. Calculate splits for any distance.">
+    <meta name="keywords" content="pace calculator, running pace, marathon pace, 5k pace, finish time calculator, split calculator">
+    <link rel="canonical" href="https://fitcalcs.xyz/pace-calculator.html">
+    <style>
+        :root { --primary: #f97316; --primary-dark: #ea580c; --secondary: #22d3ee; --accent: #10b981; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .main-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 160px; gap: 20px; }
+        .content-area { display: flex; flex-direction: column; gap: 20px; }
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .card { background: var(--bg-card); border-radius: 16px; padding: 24px; }
+        .card h2 { color: var(--secondary); margin-bottom: 20px; font-size: 1.3rem; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+        .tab { padding: 12px 24px; background: var(--bg-input); border: none; border-radius: 10px; color: var(--text-primary); cursor: pointer; font-size: 1rem; }
+        .tab.active { background: var(--primary); }
+        .form-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-secondary); }
+        input, select { width: 100%; padding: 15px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; background: var(--bg-input); color: var(--text-primary); }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        .result-hero { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 40px; border-radius: 16px; text-align: center; margin: 20px 0; }
+        .result-hero-value { font-size: 3.5rem; font-weight: 800; color: white; }
+        .result-hero-label { color: rgba(255,255,255,0.9); font-size: 1.2rem; }
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+        .result-card { background: var(--bg-input); padding: 20px; border-radius: 12px; text-align: center; }
+        .result-value { font-size: 1.3rem; font-weight: 700; color: var(--secondary); }
+        .result-label { color: var(--text-secondary); margin-top: 5px; font-size: 0.85rem; }
+        .splits-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .splits-table th, .splits-table td { padding: 12px; text-align: center; border-bottom: 1px solid var(--border); }
+        .splits-table th { background: var(--primary); color: white; }
+        .splits-table tr:nth-child(even) { background: var(--bg-input); }
+        .quick-distance { padding: 10px 18px; background: var(--bg-input); border: 2px solid var(--border); border-radius: 8px; color: var(--text-primary); cursor: pointer; }
+        .quick-distance:hover, .quick-distance.active { background: var(--primary); border-color: var(--primary); }
+        .quick-distances { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+        .related-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 15px; }
+        .related-link { display: block; padding: 12px 16px; background: var(--bg-input); border-radius: 8px; color: var(--text-primary); text-decoration: none; }
+        .related-link:hover { background: var(--primary); }
+        @media (max-width: 968px) { .main-container { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        @media (max-width: 640px) { .form-grid, .results-grid { grid-template-columns: 1fr; } }
+    </style>
+    <script>(function(s){s.dataset.zone='10379224',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</head>
+<body>
+    </div>
+    </div>
+
+    <header class="header">
+        <h1>🏃 Pace Calculator</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="content-area">
+            <div class="card">
+                <h2>⏱️ Calculate Your Pace</h2>
+                <div class="tabs">
+                    <button class="tab active" onclick="setMode('pace')">Pace</button>
+                    <button class="tab" onclick="setMode('time')">Time</button>
+                    <button class="tab" onclick="setMode('distance')">Distance</button>
+                </div>
+                
+                <div class="quick-distances">
+                    <button class="quick-distance" onclick="setDistance(5, 'km')">5K</button>
+                    <button class="quick-distance" onclick="setDistance(10, 'km')">10K</button>
+                    <button class="quick-distance" onclick="setDistance(21.0975, 'km')">Half Marathon</button>
+                    <button class="quick-distance" onclick="setDistance(42.195, 'km')">Marathon</button>
+                    <button class="quick-distance" onclick="setDistance(1, 'mi')">Mile</button>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group" id="distanceGroup">
+                        <label>Distance</label>
+                        <input type="number" id="distance" value="5" step="0.1" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Unit</label>
+                        <select id="unit" onchange="calculate()">
+                            <option value="km">Kilometers</option>
+                            <option value="mi">Miles</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="timeGroup">
+                        <label>Time (HH:MM:SS)</label>
+                        <input type="text" id="time" value="00:25:00" oninput="calculate()">
+                    </div>
+                </div>
+                <div class="form-grid" id="paceInputGroup">
+                    <div class="form-group">
+                        <label>Pace (min/km or min/mi)</label>
+                        <input type="text" id="pace" value="5:00" oninput="calculateFromPace()">
+                    </div>
+                </div>
+
+                <div class="result-hero">
+                    <div class="result-hero-label" id="resultLabel">Pace</div>
+                    <div class="result-hero-value" id="mainResult">5:00 /km</div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value" id="pacePerKm">5:00</div>
+                        <div class="result-label">min/km</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="pacePerMile">8:03</div>
+                        <div class="result-label">min/mile</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="speed">12.0</div>
+                        <div class="result-label">km/h</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📊 Race Predictions</h2>
+                <table class="splits-table">
+                    <thead>
+                        <tr>
+                            <th>Race</th>
+                            <th>Finish Time</th>
+                            <th>Pace</th>
+                        </tr>
+                    </thead>
+                    <tbody id="predictionsTable">
+                    </tbody>
+                </table>
+            </div>
+
+            </div>
+
+            <div class="card">
+                <h2>🔗 Related Tools</h2>
+                <div class="related-tools">
+                    <a href="calorie-calculator.html" class="related-link">🔥 Calorie Calculator</a>
+                    <a href="heart-rate-calculator.html" class="related-link">❤️ Heart Rate Zones</a>
+                    <a href="bmi-calculator.html" class="related-link">⚖️ BMI Calculator</a>
+                    <a href="running-pace-calculator.html" class="related-link">🏃 Running Pace</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let mode = 'pace';
+        
+        function setMode(m) {
+            mode = m;
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            calculate();
+        }
+        
+        function setDistance(dist, unit) {
+            document.getElementById('distance').value = dist;
+            document.getElementById('unit').value = unit;
+            document.querySelectorAll('.quick-distance').forEach(d => d.classList.remove('active'));
+            event.target.classList.add('active');
+            calculate();
+        }
+        
+        function parseTime(timeStr) {
+            const parts = timeStr.split(':').map(Number);
+            if (parts.length === 3) {
+                return parts[0] * 3600 + parts[1] * 60 + parts[2];
+            } else if (parts.length === 2) {
+                return parts[0] * 60 + parts[1];
+            }
+            return parseFloat(timeStr) * 60 || 0;
+        }
+        
+        function formatTime(seconds) {
+            const h = Math.floor(seconds / 3600);
+            const m = Math.floor((seconds % 3600) / 60);
+            const s = Math.floor(seconds % 60);
+            if (h > 0) {
+                return `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+            }
+            return `${m}:${String(s).padStart(2, '0')}`;
+        }
+        
+        function formatPace(seconds) {
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60);
+            return `${m}:${String(s).padStart(2, '0')}`;
+        }
+
+        function calculate() {
+            const distance = parseFloat(document.getElementById('distance').value) || 0;
+            const unit = document.getElementById('unit').value;
+            const timeStr = document.getElementById('time').value;
+            const totalSeconds = parseTime(timeStr);
+            
+            const distanceKm = unit === 'mi' ? distance * 1.60934 : distance;
+            const distanceMi = unit === 'km' ? distance / 1.60934 : distance;
+            
+            if (distance > 0 && totalSeconds > 0) {
+                const paceSecondsPerKm = totalSeconds / distanceKm;
+                const paceSecondsPerMi = totalSeconds / distanceMi;
+                const speedKmh = (distanceKm / totalSeconds) * 3600;
+                
+                document.getElementById('mainResult').textContent = formatPace(unit === 'km' ? paceSecondsPerKm : paceSecondsPerMi) + ' /' + unit;
+                document.getElementById('pacePerKm').textContent = formatPace(paceSecondsPerKm);
+                document.getElementById('pacePerMile').textContent = formatPace(paceSecondsPerMi);
+                document.getElementById('speed').textContent = speedKmh.toFixed(1);
+                
+                document.getElementById('pace').value = formatPace(paceSecondsPerKm);
+                
+                // Race predictions
+                const races = [
+                    { name: '5K', km: 5 },
+                    { name: '10K', km: 10 },
+                    { name: 'Half Marathon', km: 21.0975 },
+                    { name: 'Marathon', km: 42.195 }
+                ];
+                
+                document.getElementById('predictionsTable').innerHTML = races.map(race => {
+                    const raceTime = paceSecondsPerKm * race.km;
+                    return `<tr>
+                        <td>${race.name}</td>
+                        <td>${formatTime(raceTime)}</td>
+                        <td>${formatPace(paceSecondsPerKm)} /km</td>
+                    </tr>`;
+                }).join('');
+            }
+        }
+        
+        function calculateFromPace() {
+            const paceStr = document.getElementById('pace').value;
+            const paceSeconds = parseTime(paceStr);
+            const distance = parseFloat(document.getElementById('distance').value) || 5;
+            const unit = document.getElementById('unit').value;
+            
+            const distanceKm = unit === 'mi' ? distance * 1.60934 : distance;
+            const totalSeconds = paceSeconds * distanceKm;
+            
+            document.getElementById('time').value = formatTime(totalSeconds);
+            calculate();
+        }
+        
+        calculate();
+    </script>
+</body>
+</html>

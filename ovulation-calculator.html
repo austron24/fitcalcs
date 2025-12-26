@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ovulation Calculator - Fertility & Conception Calendar | FitCalcs</title>
+    <meta name="description" content="Free ovulation calculator. Track your fertile days, ovulation date, and best days to conceive based on your cycle.">
+    <meta name="keywords" content="ovulation calculator, fertility calendar, conception calculator, fertile days, ovulation tracker">
+    <link rel="canonical" href="https://fitcalcs.xyz/ovulation-calculator.html">
+    <style>
+        :root { --primary: #ec4899; --primary-dark: #db2777; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .main-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 160px; gap: 20px; }
+        .content-area { display: flex; flex-direction: column; gap: 20px; }
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .card { background: var(--bg-card); border-radius: 16px; padding: 24px; }
+        .card h2 { color: var(--secondary); margin-bottom: 20px; font-size: 1.3rem; }
+        .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-secondary); }
+        input, select { width: 100%; padding: 15px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; background: var(--bg-input); color: var(--text-primary); }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        .result-hero { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 35px; border-radius: 16px; text-align: center; margin: 20px 0; }
+        .result-hero-value { font-size: 2rem; font-weight: 800; color: white; }
+        .result-hero-label { color: rgba(255,255,255,0.8); }
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+        .result-card { background: var(--bg-input); padding: 20px; border-radius: 12px; text-align: center; }
+        .result-value { font-size: 1.1rem; font-weight: 700; color: var(--secondary); }
+        .result-label { color: var(--text-secondary); margin-top: 5px; font-size: 0.85rem; }
+        .breakdown-row { display: flex; justify-content: space-between; padding: 12px 15px; background: var(--bg-input); border-radius: 8px; margin-bottom: 8px; }
+        .fertile { background: linear-gradient(135deg, #059669, #047857); color: white; }
+        .related-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 15px; }
+        .related-link { display: block; padding: 12px 16px; background: var(--bg-input); border-radius: 8px; color: var(--text-primary); text-decoration: none; }
+        .related-link:hover { background: var(--primary); }
+        @media (max-width: 968px) { .main-container { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        @media (max-width: 640px) { .form-grid, .results-grid { grid-template-columns: 1fr; } }
+    </style>
+    <script>(function(s){s.dataset.zone='10379224',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</head>
+<body>
+    </div>
+    </div>
+
+    <header class="header">
+        <h1>🌸 Ovulation Calculator</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="content-area">
+            <div class="card">
+                <h2>📅 Cycle Information</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>First Day of Last Period</label>
+                        <input type="date" id="lastPeriod" oninput="calculate()">
+                    </div>
+                    <div class="form-group">
+                        <label>Average Cycle Length (days)</label>
+                        <select id="cycleLength" onchange="calculate()">
+                            <option value="25">25 days</option>
+                            <option value="26">26 days</option>
+                            <option value="27">27 days</option>
+                            <option value="28" selected>28 days</option>
+                            <option value="29">29 days</option>
+                            <option value="30">30 days</option>
+                            <option value="31">31 days</option>
+                            <option value="32">32 days</option>
+                            <option value="35">35 days</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="result-hero">
+                    <div class="result-hero-label">Estimated Ovulation Date</div>
+                    <div class="result-hero-value" id="ovulationDate">-</div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value" id="fertileStart">-</div>
+                        <div class="result-label">Fertile Window Start</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="fertileEnd">-</div>
+                        <div class="result-label">Fertile Window End</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="nextPeriod">-</div>
+                        <div class="result-label">Next Period</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📊 Fertility Calendar</h2>
+                <div id="calendar"></div>
+            </div>
+
+            </div>
+
+            <div class="card">
+                <h2>🔗 Related Tools</h2>
+                <div class="related-tools">
+                    <a href="pregnancy-calculator.html" class="related-link">🤰 Pregnancy Calculator</a>
+                    <a href="baby-due-date-calculator.html" class="related-link">👶 Due Date</a>
+                    <a href="age-calculator.html" class="related-link">📅 Age Calculator</a>
+                    <a href="bmi-calculator.html" class="related-link">⚖️ BMI Calculator</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set default date to today
+        document.getElementById('lastPeriod').valueAsDate = new Date();
+
+        function formatDate(date) {
+            return date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+        }
+
+        function calculate() {
+            const lastPeriod = new Date(document.getElementById('lastPeriod').value);
+            const cycleLength = parseInt(document.getElementById('cycleLength').value);
+
+            if (isNaN(lastPeriod.getTime())) return;
+
+            // Ovulation typically occurs 14 days before next period
+            const ovulationDay = cycleLength - 14;
+            const ovulationDate = new Date(lastPeriod);
+            ovulationDate.setDate(lastPeriod.getDate() + ovulationDay);
+
+            // Fertile window: 5 days before ovulation to 1 day after
+            const fertileStart = new Date(ovulationDate);
+            fertileStart.setDate(ovulationDate.getDate() - 5);
+            
+            const fertileEnd = new Date(ovulationDate);
+            fertileEnd.setDate(ovulationDate.getDate() + 1);
+
+            const nextPeriod = new Date(lastPeriod);
+            nextPeriod.setDate(lastPeriod.getDate() + cycleLength);
+
+            document.getElementById('ovulationDate').textContent = formatDate(ovulationDate);
+            document.getElementById('fertileStart').textContent = formatDate(fertileStart);
+            document.getElementById('fertileEnd').textContent = formatDate(fertileEnd);
+            document.getElementById('nextPeriod').textContent = formatDate(nextPeriod);
+
+            // Generate calendar
+            let html = '';
+            for (let i = 0; i < cycleLength; i++) {
+                const day = new Date(lastPeriod);
+                day.setDate(lastPeriod.getDate() + i);
+                
+                let status = '';
+                let className = '';
+                
+                if (i < 5) {
+                    status = 'Period';
+                } else if (day >= fertileStart && day <= fertileEnd) {
+                    status = day.getTime() === ovulationDate.getTime() ? '🌟 Ovulation' : '💚 Fertile';
+                    className = 'fertile';
+                } else {
+                    status = 'Low fertility';
+                }
+
+                html += '<div class="breakdown-row ' + className + '"><span>Day ' + (i + 1) + ' - ' + formatDate(day) + '</span><span>' + status + '</span></div>';
+            }
+            document.getElementById('calendar').innerHTML = html;
+        }
+        calculate();
+    </script>
+</body>
+</html>

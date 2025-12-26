@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Calculator - Optimal Bedtime & Wake Time | FitCalcs</title>
+    <meta name="description" content="Free sleep calculator. Calculate the best time to wake up or go to bed based on sleep cycles for optimal rest.">
+    <meta name="keywords" content="sleep calculator, bedtime calculator, sleep cycles, wake up time, sleep schedule">
+    <link rel="canonical" href="https://fitcalcs.xyz/sleep-calculator.html">
+    <style>
+        :root { --primary: #6366f1; --primary-dark: #4f46e5; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .main-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 160px; gap: 20px; }
+        .content-area { display: flex; flex-direction: column; gap: 20px; }
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .card { background: var(--bg-card); border-radius: 16px; padding: 24px; }
+        .card h2 { color: var(--secondary); margin-bottom: 20px; font-size: 1.3rem; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+        .tab { flex: 1; padding: 15px; border: none; background: var(--bg-input); color: var(--text-primary); border-radius: 10px; cursor: pointer; font-size: 1rem; transition: all 0.3s; }
+        .tab.active { background: var(--primary); color: white; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-secondary); }
+        input, select { width: 100%; padding: 15px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; background: var(--bg-input); color: var(--text-primary); }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        .sleep-times { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
+        .sleep-time { background: var(--bg-input); padding: 20px; border-radius: 12px; text-align: center; cursor: pointer; transition: all 0.3s; border: 2px solid transparent; }
+        .sleep-time:hover { border-color: var(--primary); }
+        .sleep-time.recommended { border-color: var(--success); background: rgba(16, 185, 129, 0.1); }
+        .time-value { font-size: 1.8rem; font-weight: 700; color: var(--secondary); }
+        .time-label { color: var(--text-secondary); margin-top: 5px; font-size: 0.9rem; }
+        .cycles-badge { display: inline-block; padding: 4px 10px; background: var(--primary); border-radius: 20px; font-size: 0.8rem; margin-top: 8px; }
+        .info-box { padding: 15px; background: rgba(99, 102, 241, 0.1); border: 2px solid var(--primary); border-radius: 10px; margin-top: 20px; }
+        .related-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 15px; }
+        .related-link { display: block; padding: 12px 16px; background: var(--bg-input); border-radius: 8px; color: var(--text-primary); text-decoration: none; }
+        .related-link:hover { background: var(--primary); }
+        @media (max-width: 968px) { .main-container { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        @media (max-width: 640px) { .sleep-times { grid-template-columns: 1fr 1fr; } }
+    </style>
+    <script>(function(s){s.dataset.zone='10379224',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</head>
+<body>
+    </div>
+    </div>
+    
+    <header class="header">
+        <h1>😴 Sleep Calculator</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="content-area">
+            <div class="card">
+                <h2>🌙 Calculate Sleep Times</h2>
+                
+                <div class="tabs">
+                    <button class="tab active" onclick="setMode('wake')">I need to wake up at...</button>
+                    <button class="tab" onclick="setMode('sleep')">I want to sleep at...</button>
+                    <button class="tab" onclick="setMode('now')">Sleep now</button>
+                </div>
+                
+                <div id="wakeMode">
+                    <div class="form-group">
+                        <label>What time do you need to wake up?</label>
+                        <input type="time" id="wakeTime" value="07:00" onchange="calculate()">
+                    </div>
+                </div>
+                
+                <div id="sleepMode" style="display: none;">
+                    <div class="form-group">
+                        <label>What time do you want to go to sleep?</label>
+                        <input type="time" id="sleepTime" value="22:00" onchange="calculate()">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Time to fall asleep (minutes)</label>
+                    <select id="fallAsleep" onchange="calculate()">
+                        <option value="5">5 minutes</option>
+                        <option value="10">10 minutes</option>
+                        <option value="15" selected>15 minutes</option>
+                        <option value="20">20 minutes</option>
+                        <option value="30">30 minutes</option>
+                    </select>
+                </div>
+                
+                <h3 style="color: var(--secondary); margin: 20px 0 10px;" id="resultLabel">Go to bed at one of these times:</h3>
+                <div class="sleep-times" id="sleepTimes"></div>
+                
+                <div class="info-box">
+                    <strong style="color: var(--primary);">💡 About Sleep Cycles</strong>
+                    <p style="margin-top: 10px; color: var(--text-secondary);">
+                        A typical sleep cycle lasts about 90 minutes. Waking up at the end of a cycle (rather than in the middle) helps you feel more refreshed. 
+                        Adults need 5-6 cycles (7.5-9 hours) per night for optimal health.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📊 Sleep Recommendations by Age</h2>
+                <div style="display: grid; gap: 10px;">
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: var(--bg-input); border-radius: 8px;">
+                        <span>👶 Newborns (0-3 months)</span><span style="color: var(--secondary);">14-17 hours</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: var(--bg-input); border-radius: 8px;">
+                        <span>🧒 Toddlers (1-2 years)</span><span style="color: var(--secondary);">11-14 hours</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: var(--bg-input); border-radius: 8px;">
+                        <span>👦 Children (6-13 years)</span><span style="color: var(--secondary);">9-11 hours</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: var(--bg-input); border-radius: 8px;">
+                        <span>🧑 Teens (14-17 years)</span><span style="color: var(--secondary);">8-10 hours</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: var(--bg-input); border-radius: 8px;">
+                        <span>👨 Adults (18-64 years)</span><span style="color: var(--secondary);">7-9 hours</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 12px; background: var(--bg-input); border-radius: 8px;">
+                        <span>👴 Seniors (65+ years)</span><span style="color: var(--secondary);">7-8 hours</span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="card">
+                <h2>🔗 Related Tools</h2>
+                <div class="related-tools">
+                    <a href="age-calculator.html" class="related-link">📅 Age Calculator</a>
+                    <a href="calorie-calculator.html" class="related-link">🍎 Calorie Calculator</a>
+                    <a href="bmi-calculator.html" class="related-link">⚖️ BMI Calculator</a>
+                    <a href="time-zone-converter.html" class="related-link">🌍 Time Zone Converter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentMode = 'wake';
+        const CYCLE_MINUTES = 90;
+        
+        function setMode(mode) {
+            currentMode = mode;
+            document.querySelectorAll('.tab').forEach((tab, i) => {
+                tab.classList.toggle('active', (mode === 'wake' && i === 0) || (mode === 'sleep' && i === 1) || (mode === 'now' && i === 2));
+            });
+            document.getElementById('wakeMode').style.display = mode === 'wake' ? 'block' : 'none';
+            document.getElementById('sleepMode').style.display = mode === 'sleep' ? 'block' : 'none';
+            calculate();
+        }
+        
+        function formatTime(date) {
+            return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+        }
+        
+        function calculate() {
+            const fallAsleep = parseInt(document.getElementById('fallAsleep').value);
+            const container = document.getElementById('sleepTimes');
+            const label = document.getElementById('resultLabel');
+            let times = [];
+            
+            if (currentMode === 'wake') {
+                label.textContent = 'Go to bed at one of these times:';
+                const wakeTime = document.getElementById('wakeTime').value;
+                const [hours, mins] = wakeTime.split(':').map(Number);
+                const wakeDate = new Date();
+                wakeDate.setHours(hours, mins, 0, 0);
+                
+                for (let cycles = 6; cycles >= 3; cycles--) {
+                    const sleepDate = new Date(wakeDate.getTime() - (cycles * CYCLE_MINUTES + fallAsleep) * 60000);
+                    times.push({ time: sleepDate, cycles, hours: (cycles * CYCLE_MINUTES) / 60 });
+                }
+            } else if (currentMode === 'sleep') {
+                label.textContent = 'Wake up at one of these times:';
+                const sleepTime = document.getElementById('sleepTime').value;
+                const [hours, mins] = sleepTime.split(':').map(Number);
+                const sleepDate = new Date();
+                sleepDate.setHours(hours, mins, 0, 0);
+                
+                for (let cycles = 3; cycles <= 6; cycles++) {
+                    const wakeDate = new Date(sleepDate.getTime() + (cycles * CYCLE_MINUTES + fallAsleep) * 60000);
+                    times.push({ time: wakeDate, cycles, hours: (cycles * CYCLE_MINUTES) / 60 });
+                }
+            } else {
+                label.textContent = 'Wake up at one of these times:';
+                const now = new Date();
+                const sleepDate = new Date(now.getTime() + fallAsleep * 60000);
+                
+                for (let cycles = 3; cycles <= 6; cycles++) {
+                    const wakeDate = new Date(sleepDate.getTime() + cycles * CYCLE_MINUTES * 60000);
+                    times.push({ time: wakeDate, cycles, hours: (cycles * CYCLE_MINUTES) / 60 });
+                }
+            }
+            
+            container.innerHTML = times.map((t, i) => `
+                <div class="sleep-time ${t.cycles >= 5 ? 'recommended' : ''}">
+                    <div class="time-value">${formatTime(t.time)}</div>
+                    <div class="time-label">${t.hours} hours of sleep</div>
+                    <div class="cycles-badge">${t.cycles} cycles ${t.cycles >= 5 ? '✓' : ''}</div>
+                </div>
+            `).join('');
+        }
+        
+        calculate();
+    </script>
+</body>
+</html>

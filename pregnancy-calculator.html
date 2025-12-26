@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Calculator - Due Date & Week Calculator | FitCalcs</title>
+    <meta name="description" content="Free pregnancy calculator. Calculate your due date, current pregnancy week, and track important milestones.">
+    <meta name="keywords" content="pregnancy calculator, due date calculator, pregnancy week, gestational age, pregnancy tracker">
+    <link rel="canonical" href="https://fitcalcs.xyz/pregnancy-calculator.html">
+    <style>
+        :root { --primary: #ec4899; --primary-dark: #db2777; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg-dark); color: var(--text-primary); min-height: 100vh; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .main-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 160px; gap: 20px; }
+        .content-area { display: flex; flex-direction: column; gap: 20px; }
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .card { background: var(--bg-card); border-radius: 16px; padding: 24px; }
+        .card h2 { color: var(--secondary); margin-bottom: 20px; font-size: 1.3rem; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-secondary); }
+        input, select { width: 100%; padding: 15px; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; background: var(--bg-input); color: var(--text-primary); }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        .result-hero { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 35px; border-radius: 16px; text-align: center; margin: 20px 0; }
+        .result-hero-value { font-size: 2.5rem; font-weight: 800; color: white; }
+        .result-hero-label { color: rgba(255,255,255,0.8); }
+        .results-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 20px; }
+        .result-card { background: var(--bg-input); padding: 20px; border-radius: 12px; text-align: center; }
+        .result-value { font-size: 1.3rem; font-weight: 700; color: var(--secondary); }
+        .result-label { color: var(--text-secondary); margin-top: 5px; font-size: 0.85rem; }
+        .progress-container { margin: 20px 0; }
+        .progress-bar { height: 30px; background: var(--bg-dark); border-radius: 15px; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--success)); border-radius: 15px; }
+        .breakdown-row { display: flex; justify-content: space-between; padding: 12px 15px; background: var(--bg-input); border-radius: 8px; margin-bottom: 8px; }
+        .related-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 15px; }
+        .related-link { display: block; padding: 12px 16px; background: var(--bg-input); border-radius: 8px; color: var(--text-primary); text-decoration: none; }
+        .related-link:hover { background: var(--primary); }
+        @media (max-width: 968px) { .main-container { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        @media (max-width: 640px) { .results-grid { grid-template-columns: 1fr 1fr; } }
+    </style>
+    <script>(function(s){s.dataset.zone='10379224',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</head>
+<body>
+    </div>
+    </div>
+
+    <header class="header">
+        <h1>🤰 Pregnancy Calculator</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="content-area">
+            <div class="card">
+                <h2>📅 Enter First Day of Last Period</h2>
+                <div class="form-group">
+                    <label>First Day of Last Menstrual Period (LMP)</label>
+                    <input type="date" id="lmpDate" oninput="calculate()">
+                </div>
+
+                <div class="result-hero">
+                    <div class="result-hero-label">Estimated Due Date</div>
+                    <div class="result-hero-value" id="dueDate">--</div>
+                </div>
+
+                <div class="progress-container">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                        <span>Pregnancy Progress</span>
+                        <span id="progressPct">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value" id="currentWeek">Week 0</div>
+                        <div class="result-label">Current Week</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="trimester">--</div>
+                        <div class="result-label">Trimester</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="daysRemaining">0</div>
+                        <div class="result-label">Days Remaining</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="weeksRemaining">0</div>
+                        <div class="result-label">Weeks Remaining</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📋 Key Milestones</h2>
+                <div id="milestones"></div>
+            </div>
+
+            </div>
+
+            <div class="card">
+                <h2>🔗 Related Tools</h2>
+                <div class="related-tools">
+                    <a href="baby-due-date-calculator.html" class="related-link">👶 Due Date</a>
+                    <a href="age-calculator.html" class="related-link">📅 Age Calculator</a>
+                    <a href="date-calculator.html" class="related-link">🗓️ Date Calculator</a>
+                    <a href="ovulation-calculator.html" class="related-link">🌸 Ovulation</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const today = new Date();
+        const defaultLMP = new Date(today);
+        defaultLMP.setDate(today.getDate() - 84);
+        document.getElementById('lmpDate').value = defaultLMP.toISOString().split('T')[0];
+
+        function calculate() {
+            const lmpInput = document.getElementById('lmpDate').value;
+            if (!lmpInput) return;
+
+            const lmp = new Date(lmpInput);
+            const dueDate = new Date(lmp);
+            dueDate.setDate(lmp.getDate() + 280);
+
+            const today = new Date();
+            const daysSinceLMP = Math.floor((today - lmp) / (1000 * 60 * 60 * 24));
+            const weeksPregnant = Math.floor(daysSinceLMP / 7);
+            const daysInWeek = daysSinceLMP % 7;
+            const daysRemaining = Math.max(0, Math.floor((dueDate - today) / (1000 * 60 * 60 * 24)));
+            const weeksRemaining = Math.floor(daysRemaining / 7);
+            const progressPct = Math.min(100, (daysSinceLMP / 280) * 100);
+
+            let trimester = '1st Trimester';
+            if (weeksPregnant >= 28) trimester = '3rd Trimester';
+            else if (weeksPregnant >= 13) trimester = '2nd Trimester';
+
+            const options = { month: 'long', day: 'numeric', year: 'numeric' };
+            document.getElementById('dueDate').textContent = dueDate.toLocaleDateString('en-US', options);
+            document.getElementById('currentWeek').textContent = 'Week ' + weeksPregnant + ', Day ' + daysInWeek;
+            document.getElementById('trimester').textContent = trimester;
+            document.getElementById('daysRemaining').textContent = daysRemaining + ' days';
+            document.getElementById('weeksRemaining').textContent = weeksRemaining + ' weeks';
+            document.getElementById('progressPct').textContent = progressPct.toFixed(0) + '%';
+            document.getElementById('progressFill').style.width = progressPct + '%';
+
+            const milestones = [
+                { week: 8, label: 'First Prenatal Visit' },
+                { week: 12, label: 'End of 1st Trimester' },
+                { week: 20, label: 'Anatomy Scan' },
+                { week: 24, label: 'Viability Milestone' },
+                { week: 28, label: 'Start of 3rd Trimester' },
+                { week: 37, label: 'Full Term Begins' },
+                { week: 40, label: 'Due Date' }
+            ];
+
+            let milestonesHtml = '';
+            milestones.forEach(m => {
+                const mDate = new Date(lmp);
+                mDate.setDate(lmp.getDate() + m.week * 7);
+                const status = weeksPregnant >= m.week ? '✅' : '⏳';
+                milestonesHtml += '<div class="breakdown-row"><span>' + status + ' Week ' + m.week + ' - ' + m.label + '</span><span>' + mDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + '</span></div>';
+            });
+            document.getElementById('milestones').innerHTML = milestonesHtml;
+        }
+        calculate();
+    </script>
+</body>
+</html>

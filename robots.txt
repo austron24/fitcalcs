@@ -1,8 +1,10 @@
-# Robots.txt for FitCalcs
+# Robots.txt for FitCalcs.xyz
+# https://fitcalcs.xyz
+
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemap location
 Sitemap: https://fitcalcs.xyz/sitemap.xml
 
 # Crawl-delay (optional, be nice to servers)

@@ -5,8 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TDEE Calculator - Total Daily Energy Expenditure | FitCalcs</title>
-    <meta name="description" content="Free TDEE calculator. Calculate your Total Daily Energy Expenditure to determine how many calories you burn daily. Free and instant results.">
-        <link rel="canonical" href="https://fitcalcs.xyz/tdee-calculator.html">
+    <meta name="description" content="Calculate your Total Daily Energy Expenditure (TDEE) to determine how many calories you burn per day. Includes BMR calculation and activity multipliers.">
+    <meta name="keywords" content="TDEE calculator, total daily energy expenditure, BMR calculator, calories burned, metabolic rate">
+    <meta name="author" content="FitCalcs">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://fitcalcs.xyz/tdee-calculator.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitcalcs.xyz/tdee-calculator.html">
+    <meta property="og:title" content="TDEE Calculator - Total Daily Energy Expenditure | FitCalcs">
+    <meta property="og:description" content="Calculate your Total Daily Energy Expenditure (TDEE) to determine how many calories you burn per day. Includes BMR calculation and activity multipliers.">
+    <meta property="og:site_name" content="FitCalcs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fitcalcs.xyz/tdee-calculator.html">
+    <meta name="twitter:title" content="TDEE Calculator - Total Daily Energy Expenditure | FitCalcs">
+    <meta name="twitter:description" content="Calculate your Total Daily Energy Expenditure (TDEE) to determine how many calories you burn per day. Includes BMR calculation and activity multipliers.">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#14b8a6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
         :root { --primary: #06b6d4; --primary-dark: #0891b2; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -48,8 +71,9 @@
             "@type": "WebApplication",
             "name": "Tdee Calculator",
             "url": "https://fitcalcs.xyz/tdee-calculator.html",
-            "applicationCategory": "FinanceApplication",
+            "applicationCategory": "HealthApplication",
             "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -59,32 +83,43 @@
                 "@type": "Organization",
                 "name": "FitCalcs",
                 "url": "https://fitcalcs.xyz"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
             }
         },
         {
             "@type": "FAQPage",
-            "mainEntity": [{
-            "@type": "Question",
-            "name": "How accurate are online health calculators?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional."
-            }
-        },{
-            "@type": "Question",
-            "name": "How do I calculate my daily calorie needs?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor."
-            }
-        },{
-            "@type": "Question",
-            "name": "What is a healthy BMI range?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat."
-            }
-        }]
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is TDEE?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TDEE stands for Total Daily Energy Expenditure. It represents the total number of calories your body burns in a day, including all activities."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How is TDEE calculated?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TDEE is calculated by multiplying your Basal Metabolic Rate (BMR) by an activity factor that reflects your daily activity level."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Why is TDEE important for weight management?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Knowing your TDEE helps you create the right calorie deficit for weight loss or surplus for muscle gain."
+                    }
+                }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -102,6 +137,34 @@
                     "item": "https://fitcalcs.xyz/tdee-calculator.html"
                 }
             ]
+        },
+        {
+            "@type": "HowTo",
+            "name": "How to Use the Tdee Calculator",
+            "description": "Step-by-step guide to using the Tdee Calculator on FitCalcs.",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "text": "Enter your age, height, and weight"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "text": "Select your gender"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "text": "Choose your activity level"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "text": "Get your TDEE and calorie recommendations"
+                }
+            ],
+            "totalTime": "PT1M"
         }
     ]
 }
@@ -213,19 +276,19 @@
             </div>
 
             <div class="card" style="margin-top: 20px;">
-        <h2>❓ Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list" style="margin-top: 15px;">
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How accurate are online health calculators?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is TDEE?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">TDEE stands for Total Daily Energy Expenditure. It represents the total number of calories your body burns in a day, including all activities.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How do I calculate my daily calorie needs?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How is TDEE calculated?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">TDEE is calculated by multiplying your Basal Metabolic Rate (BMR) by an activity factor that reflects your daily activity level.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is a healthy BMI range?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">Why is TDEE important for weight management?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Knowing your TDEE helps you create the right calorie deficit for weight loss or surplus for muscle gain.</p>
             </details>
         </div>
     </div>

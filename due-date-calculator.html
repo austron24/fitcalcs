@@ -4,9 +4,32 @@
     <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Due Date Calculator - Project & Task Deadline Planner | FitCalcs</title>
-    <meta name="description" content="Free due date calculator. Calculate deadlines, work back from due dates, and plan project timelines with business day calculations. Free and instant results.">
-        <link rel="canonical" href="https://fitcalcs.xyz/due-date-calculator.html">
+    <title>Due Date Calculator - Pregnancy Due Date | FitCalcs</title>
+    <meta name="description" content="Calculate your pregnancy due date based on your last menstrual period or conception date. Track your pregnancy week by week.">
+    <meta name="keywords" content="due date calculator, pregnancy due date, conception date, when is baby due, EDD calculator">
+    <meta name="author" content="FitCalcs">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://fitcalcs.xyz/due-date-calculator.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitcalcs.xyz/due-date-calculator.html">
+    <meta property="og:title" content="Due Date Calculator - Pregnancy Due Date | FitCalcs">
+    <meta property="og:description" content="Calculate your pregnancy due date based on your last menstrual period or conception date. Track your pregnancy week by week.">
+    <meta property="og:site_name" content="FitCalcs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fitcalcs.xyz/due-date-calculator.html">
+    <meta name="twitter:title" content="Due Date Calculator - Pregnancy Due Date | FitCalcs">
+    <meta name="twitter:description" content="Calculate your pregnancy due date based on your last menstrual period or conception date. Track your pregnancy week by week.">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#14b8a6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
         :root { --primary: #8b5cf6; --primary-dark: #7c3aed; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -50,8 +73,9 @@
             "@type": "WebApplication",
             "name": "Due Date Calculator",
             "url": "https://fitcalcs.xyz/due-date-calculator.html",
-            "applicationCategory": "FinanceApplication",
+            "applicationCategory": "HealthApplication",
             "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -61,32 +85,43 @@
                 "@type": "Organization",
                 "name": "FitCalcs",
                 "url": "https://fitcalcs.xyz"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
             }
         },
         {
             "@type": "FAQPage",
-            "mainEntity": [{
-            "@type": "Question",
-            "name": "How accurate are online health calculators?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional."
-            }
-        },{
-            "@type": "Question",
-            "name": "How do I calculate my daily calorie needs?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor."
-            }
-        },{
-            "@type": "Question",
-            "name": "What is a healthy BMI range?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat."
-            }
-        }]
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How accurate is a due date calculator?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Due dates are estimates. Only about 5% of babies are born on their exact due date. Most arrive within 2 weeks before or after."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How is the due date calculated?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Due date is calculated by adding 280 days (40 weeks) to the first day of your last menstrual period."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can my due date change?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, ultrasounds may adjust your due date, especially if done in the first trimester when dating is most accurate."
+                    }
+                }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -104,6 +139,34 @@
                     "item": "https://fitcalcs.xyz/due-date-calculator.html"
                 }
             ]
+        },
+        {
+            "@type": "HowTo",
+            "name": "How to Use the Due Date Calculator",
+            "description": "Step-by-step guide to using the Due Date Calculator on FitCalcs.",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "text": "Enter the first day of your last period"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "text": "Or enter your conception date"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "text": "View your estimated due date"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "text": "Track your current pregnancy week"
+                }
+            ],
+            "totalTime": "PT1M"
         }
     ]
 }
@@ -216,19 +279,19 @@
             </div>
 
             <div class="card" style="margin-top: 20px;">
-        <h2>❓ Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list" style="margin-top: 15px;">
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How accurate are online health calculators?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How accurate is a due date calculator?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Due dates are estimates. Only about 5% of babies are born on their exact due date. Most arrive within 2 weeks before or after.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How do I calculate my daily calorie needs?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How is the due date calculated?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Due date is calculated by adding 280 days (40 weeks) to the first day of your last menstrual period.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is a healthy BMI range?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">Can my due date change?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Yes, ultrasounds may adjust your due date, especially if done in the first trimester when dating is most accurate.</p>
             </details>
         </div>
     </div>

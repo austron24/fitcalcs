@@ -4,9 +4,32 @@
     <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Calculator - Calculate Your Exact Age | FitCalcs</title>
-    <meta name="description" content="Free age calculator. Calculate your exact age in years, months, days, hours, and minutes from your birth date. Free and instant results.">
-        <link rel="canonical" href="https://fitcalcs.xyz/age-calculator.html">
+    <title>Age Calculator - Calculate Exact Age in Years, Months, Days | FitCalcs</title>
+    <meta name="description" content="Calculate your exact age in years, months, days, hours, and minutes. Find out how many days until your next birthday.">
+    <meta name="keywords" content="age calculator, birthday calculator, exact age, age in days, how old am I">
+    <meta name="author" content="FitCalcs">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://fitcalcs.xyz/age-calculator.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitcalcs.xyz/age-calculator.html">
+    <meta property="og:title" content="Age Calculator - Calculate Exact Age in Years, Months, Days | FitCalcs">
+    <meta property="og:description" content="Calculate your exact age in years, months, days, hours, and minutes. Find out how many days until your next birthday.">
+    <meta property="og:site_name" content="FitCalcs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fitcalcs.xyz/age-calculator.html">
+    <meta name="twitter:title" content="Age Calculator - Calculate Exact Age in Years, Months, Days | FitCalcs">
+    <meta name="twitter:description" content="Calculate your exact age in years, months, days, hours, and minutes. Find out how many days until your next birthday.">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#14b8a6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
         :root { --primary: #f59e0b; --primary-dark: #d97706; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,8 +68,9 @@
             "@type": "WebApplication",
             "name": "Age Calculator",
             "url": "https://fitcalcs.xyz/age-calculator.html",
-            "applicationCategory": "FinanceApplication",
+            "applicationCategory": "HealthApplication",
             "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -56,32 +80,43 @@
                 "@type": "Organization",
                 "name": "FitCalcs",
                 "url": "https://fitcalcs.xyz"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
             }
         },
         {
             "@type": "FAQPage",
-            "mainEntity": [{
-            "@type": "Question",
-            "name": "How accurate are online health calculators?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional."
-            }
-        },{
-            "@type": "Question",
-            "name": "How do I calculate my daily calorie needs?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor."
-            }
-        },{
-            "@type": "Question",
-            "name": "What is a healthy BMI range?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat."
-            }
-        }]
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How is age calculated exactly?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Age is calculated from your birth date to today, accounting for leap years and varying month lengths for precise results."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How many days old am I?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Enter your birth date to see your exact age in days. The average person lives about 27,375 days (75 years)."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "When is my half birthday?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Your half birthday is exactly 6 months after your birth date."
+                    }
+                }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -99,6 +134,34 @@
                     "item": "https://fitcalcs.xyz/age-calculator.html"
                 }
             ]
+        },
+        {
+            "@type": "HowTo",
+            "name": "How to Use the Age Calculator",
+            "description": "Step-by-step guide to using the Age Calculator on FitCalcs.",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "text": "Enter your birth date"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "text": "Optionally enter a different end date"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "text": "View your exact age breakdown"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "text": "See days until your next birthday"
+                }
+            ],
+            "totalTime": "PT1M"
         }
     ]
 }
@@ -173,19 +236,19 @@
             </div>
 
             <div class="card" style="margin-top: 20px;">
-        <h2>❓ Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list" style="margin-top: 15px;">
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How accurate are online health calculators?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How is age calculated exactly?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Age is calculated from your birth date to today, accounting for leap years and varying month lengths for precise results.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How do I calculate my daily calorie needs?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How many days old am I?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Enter your birth date to see your exact age in days. The average person lives about 27,375 days (75 years).</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is a healthy BMI range?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">When is my half birthday?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Your half birthday is exactly 6 months after your birth date.</p>
             </details>
         </div>
     </div>

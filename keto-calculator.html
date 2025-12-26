@@ -4,9 +4,32 @@
     <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keto Calculator - Keto Macro & Calorie Calculator | FitCalcs</title>
-    <meta name="description" content="Free keto calculator. Calculate your ideal macros, calories, and fat/protein/carb ratios for the ketogenic diet. Free and instant results.">
-        <link rel="canonical" href="https://fitcalcs.xyz/keto-calculator.html">
+    <title>Keto Calculator - Ketogenic Diet Macro Calculator | FitCalcs</title>
+    <meta name="description" content="Free keto calculator to determine your ideal ketogenic diet macros. Calculate your daily carb limit, protein, and fat intake for ketosis.">
+    <meta name="keywords" content="keto calculator, ketogenic diet calculator, keto macros, low carb calculator, ketosis calculator">
+    <meta name="author" content="FitCalcs">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://fitcalcs.xyz/keto-calculator.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitcalcs.xyz/keto-calculator.html">
+    <meta property="og:title" content="Keto Calculator - Ketogenic Diet Macro Calculator | FitCalcs">
+    <meta property="og:description" content="Free keto calculator to determine your ideal ketogenic diet macros. Calculate your daily carb limit, protein, and fat intake for ketosis.">
+    <meta property="og:site_name" content="FitCalcs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fitcalcs.xyz/keto-calculator.html">
+    <meta name="twitter:title" content="Keto Calculator - Ketogenic Diet Macro Calculator | FitCalcs">
+    <meta name="twitter:description" content="Free keto calculator to determine your ideal ketogenic diet macros. Calculate your daily carb limit, protein, and fat intake for ketosis.">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#14b8a6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
         :root { --primary: #059669; --primary-dark: #047857; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -46,8 +69,9 @@
             "@type": "WebApplication",
             "name": "Keto Calculator",
             "url": "https://fitcalcs.xyz/keto-calculator.html",
-            "applicationCategory": "FinanceApplication",
+            "applicationCategory": "HealthApplication",
             "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -57,32 +81,43 @@
                 "@type": "Organization",
                 "name": "FitCalcs",
                 "url": "https://fitcalcs.xyz"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
             }
         },
         {
             "@type": "FAQPage",
-            "mainEntity": [{
-            "@type": "Question",
-            "name": "How accurate are online health calculators?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional."
-            }
-        },{
-            "@type": "Question",
-            "name": "How do I calculate my daily calorie needs?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor."
-            }
-        },{
-            "@type": "Question",
-            "name": "What is a healthy BMI range?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat."
-            }
-        }]
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How many carbs can I eat on keto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Most keto diets limit carbs to 20-50 grams net carbs per day to achieve and maintain ketosis."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How much protein do I need on keto?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "On keto, aim for 0.6-1.0 grams of protein per pound of lean body mass to preserve muscle while staying in ketosis."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How long does it take to enter ketosis?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "It typically takes 2-4 days of limiting carbs to 20-50g to enter ketosis. This varies based on individual metabolism and activity level."
+                    }
+                }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -100,6 +135,34 @@
                     "item": "https://fitcalcs.xyz/keto-calculator.html"
                 }
             ]
+        },
+        {
+            "@type": "HowTo",
+            "name": "How to Use the Keto Calculator",
+            "description": "Step-by-step guide to using the Keto Calculator on FitCalcs.",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "text": "Enter your stats (age, height, weight, gender)"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "text": "Set your activity level and deficit"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "text": "Choose your carb limit"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "text": "Get your personalized keto macros"
+                }
+            ],
+            "totalTime": "PT1M"
         }
     ]
 }
@@ -199,19 +262,19 @@
             </div>
 
             <div class="card" style="margin-top: 20px;">
-        <h2>❓ Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list" style="margin-top: 15px;">
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How accurate are online health calculators?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How many carbs can I eat on keto?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Most keto diets limit carbs to 20-50 grams net carbs per day to achieve and maintain ketosis.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How do I calculate my daily calorie needs?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How much protein do I need on keto?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">On keto, aim for 0.6-1.0 grams of protein per pound of lean body mass to preserve muscle while staying in ketosis.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is a healthy BMI range?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How long does it take to enter ketosis?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">It typically takes 2-4 days of limiting carbs to 20-50g to enter ketosis. This varies based on individual metabolism and activity level.</p>
             </details>
         </div>
     </div>

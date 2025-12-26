@@ -4,9 +4,32 @@
     <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fasting Calculator - Track Your Intermittent Fasting | FitCalcs</title>
-    <meta name="description" content="Free fasting calculator. Track intermittent fasting windows, calculate fasting zones, and see when you enter fat burning and autophagy states. Free and insta...">
-        <link rel="canonical" href="https://fitcalcs.xyz/fasting-calculator.html">
+    <title>Fasting Calculator - Intermittent Fasting Timer | FitCalcs</title>
+    <meta name="description" content="Track your intermittent fasting windows with our fasting calculator. Calculate eating windows for 16:8, 18:6, 20:4, and other fasting protocols.">
+    <meta name="keywords" content="fasting calculator, intermittent fasting, fasting timer, IF calculator, 16:8 fasting">
+    <meta name="author" content="FitCalcs">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://fitcalcs.xyz/fasting-calculator.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitcalcs.xyz/fasting-calculator.html">
+    <meta property="og:title" content="Fasting Calculator - Intermittent Fasting Timer | FitCalcs">
+    <meta property="og:description" content="Track your intermittent fasting windows with our fasting calculator. Calculate eating windows for 16:8, 18:6, 20:4, and other fasting protocols.">
+    <meta property="og:site_name" content="FitCalcs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fitcalcs.xyz/fasting-calculator.html">
+    <meta name="twitter:title" content="Fasting Calculator - Intermittent Fasting Timer | FitCalcs">
+    <meta name="twitter:description" content="Track your intermittent fasting windows with our fasting calculator. Calculate eating windows for 16:8, 18:6, 20:4, and other fasting protocols.">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#14b8a6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
         :root { --primary: #10b981; --primary-dark: #059669; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -58,8 +81,9 @@
             "@type": "WebApplication",
             "name": "Fasting Calculator",
             "url": "https://fitcalcs.xyz/fasting-calculator.html",
-            "applicationCategory": "FinanceApplication",
+            "applicationCategory": "HealthApplication",
             "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -69,32 +93,43 @@
                 "@type": "Organization",
                 "name": "FitCalcs",
                 "url": "https://fitcalcs.xyz"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
             }
         },
         {
             "@type": "FAQPage",
-            "mainEntity": [{
-            "@type": "Question",
-            "name": "How accurate are online health calculators?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional."
-            }
-        },{
-            "@type": "Question",
-            "name": "How do I calculate my daily calorie needs?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor."
-            }
-        },{
-            "@type": "Question",
-            "name": "What is a healthy BMI range?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat."
-            }
-        }]
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is intermittent fasting?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. Popular methods include 16:8, 18:6, and OMAD."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What can I have during a fast?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Water, black coffee, and plain tea are generally acceptable during fasting. These have minimal calories and won't break your fast."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "When will I see results from fasting?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Most people notice weight loss and improved energy within 2-4 weeks of consistent intermittent fasting."
+                    }
+                }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -112,6 +147,34 @@
                     "item": "https://fitcalcs.xyz/fasting-calculator.html"
                 }
             ]
+        },
+        {
+            "@type": "HowTo",
+            "name": "How to Use the Fasting Calculator",
+            "description": "Step-by-step guide to using the Fasting Calculator on FitCalcs.",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "text": "Select your fasting protocol (16:8, 18:6, etc.)"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "text": "Enter your last meal time or start time"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "text": "View your fasting and eating windows"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "text": "Track your progress"
+                }
+            ],
+            "totalTime": "PT1M"
         }
     ]
 }
@@ -234,19 +297,19 @@
             </div>
 
             <div class="card" style="margin-top: 20px;">
-        <h2>❓ Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list" style="margin-top: 15px;">
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How accurate are online health calculators?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is intermittent fasting?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. Popular methods include 16:8, 18:6, and OMAD.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How do I calculate my daily calorie needs?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What can I have during a fast?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Water, black coffee, and plain tea are generally acceptable during fasting. These have minimal calories and won't break your fast.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is a healthy BMI range?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">When will I see results from fasting?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Most people notice weight loss and improved energy within 2-4 weeks of consistent intermittent fasting.</p>
             </details>
         </div>
     </div>

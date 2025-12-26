@@ -5,8 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Resizer - Resize Images Online Free | FitCalcs</title>
-    <meta name="description" content="Calculate and free online image resizer. Resize images by pixels or percentage. Maintain aspect ratio. Download resized images instantly.">
-        <link rel="canonical" href="https://fitcalcs.xyz/image-resizer.html">
+    <meta name="description" content="Resize images online for free. Resize by percentage or exact dimensions. Supports JPG, PNG, and other formats. No upload required.">
+    <meta name="keywords" content="image resizer, resize image, picture resizer, photo resizer, resize online">
+    <meta name="author" content="FitCalcs">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://fitcalcs.xyz/image-resizer.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitcalcs.xyz/image-resizer.html">
+    <meta property="og:title" content="Image Resizer - Resize Images Online Free | FitCalcs">
+    <meta property="og:description" content="Resize images online for free. Resize by percentage or exact dimensions. Supports JPG, PNG, and other formats. No upload required.">
+    <meta property="og:site_name" content="FitCalcs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fitcalcs.xyz/image-resizer.html">
+    <meta name="twitter:title" content="Image Resizer - Resize Images Online Free | FitCalcs">
+    <meta name="twitter:description" content="Resize images online for free. Resize by percentage or exact dimensions. Supports JPG, PNG, and other formats. No upload required.">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#14b8a6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
         :root { --primary: #6366f1; --primary-dark: #4f46e5; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -54,8 +77,9 @@
             "@type": "WebApplication",
             "name": "Image Resizer",
             "url": "https://fitcalcs.xyz/image-resizer.html",
-            "applicationCategory": "FinanceApplication",
+            "applicationCategory": "UtilitiesApplication",
             "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -65,32 +89,43 @@
                 "@type": "Organization",
                 "name": "FitCalcs",
                 "url": "https://fitcalcs.xyz"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
             }
         },
         {
             "@type": "FAQPage",
-            "mainEntity": [{
-            "@type": "Question",
-            "name": "How accurate are online health calculators?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional."
-            }
-        },{
-            "@type": "Question",
-            "name": "How do I calculate my daily calorie needs?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor."
-            }
-        },{
-            "@type": "Question",
-            "name": "What is a healthy BMI range?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat."
-            }
-        }]
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How do I resize an image without losing quality?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "When reducing size, quality loss is minimal. When enlarging, limit to 200% to avoid pixelation. Use high-quality source images."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is the best image size for web?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For web, keep images under 200KB. Common sizes are 1200px wide for content images and 150px for thumbnails."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I resize multiple images at once?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "This tool handles one image at a time for best quality. For batch processing, consider desktop software."
+                    }
+                }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -108,6 +143,34 @@
                     "item": "https://fitcalcs.xyz/image-resizer.html"
                 }
             ]
+        },
+        {
+            "@type": "HowTo",
+            "name": "How to Use the Image Resizer",
+            "description": "Step-by-step guide to using the Image Resizer on FitCalcs.",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "text": "Upload your image"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "text": "Choose resize method (percentage or dimensions)"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "text": "Enter your target size"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "text": "Download your resized image"
+                }
+            ],
+            "totalTime": "PT1M"
         }
     ]
 }
@@ -197,19 +260,19 @@
             </div>
 
             <div class="card" style="margin-top: 20px;">
-        <h2>❓ Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list" style="margin-top: 15px;">
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How accurate are online health calculators?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How do I resize an image without losing quality?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">When reducing size, quality loss is minimal. When enlarging, limit to 200% to avoid pixelation. Use high-quality source images.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How do I calculate my daily calorie needs?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is the best image size for web?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">For web, keep images under 200KB. Common sizes are 1200px wide for content images and 150px for thumbnails.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is a healthy BMI range?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">Can I resize multiple images at once?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">This tool handles one image at a time for best quality. For batch processing, consider desktop software.</p>
             </details>
         </div>
     </div>

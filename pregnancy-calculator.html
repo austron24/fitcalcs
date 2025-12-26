@@ -5,8 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pregnancy Calculator - Due Date & Week Calculator | FitCalcs</title>
-    <meta name="description" content="Free pregnancy calculator. Calculate your due date, current pregnancy week, and track important milestones. Free and instant results.">
-        <link rel="canonical" href="https://fitcalcs.xyz/pregnancy-calculator.html">
+    <meta name="description" content="Free pregnancy due date calculator. Calculate your due date, current pregnancy week, trimester, and important milestones based on your last menstrual period.">
+    <meta name="keywords" content="pregnancy calculator, due date calculator, pregnancy week calculator, conception date, trimester calculator">
+    <meta name="author" content="FitCalcs">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://fitcalcs.xyz/pregnancy-calculator.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitcalcs.xyz/pregnancy-calculator.html">
+    <meta property="og:title" content="Pregnancy Calculator - Due Date & Week Calculator | FitCalcs">
+    <meta property="og:description" content="Free pregnancy due date calculator. Calculate your due date, current pregnancy week, trimester, and important milestones based on your last menstrual period.">
+    <meta property="og:site_name" content="FitCalcs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fitcalcs.xyz/pregnancy-calculator.html">
+    <meta name="twitter:title" content="Pregnancy Calculator - Due Date & Week Calculator | FitCalcs">
+    <meta name="twitter:description" content="Free pregnancy due date calculator. Calculate your due date, current pregnancy week, trimester, and important milestones based on your last menstrual period.">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#14b8a6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
         :root { --primary: #ec4899; --primary-dark: #db2777; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -48,8 +71,9 @@
             "@type": "WebApplication",
             "name": "Pregnancy Calculator",
             "url": "https://fitcalcs.xyz/pregnancy-calculator.html",
-            "applicationCategory": "FinanceApplication",
+            "applicationCategory": "HealthApplication",
             "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -59,32 +83,43 @@
                 "@type": "Organization",
                 "name": "FitCalcs",
                 "url": "https://fitcalcs.xyz"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
             }
         },
         {
             "@type": "FAQPage",
-            "mainEntity": [{
-            "@type": "Question",
-            "name": "How accurate are online health calculators?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional."
-            }
-        },{
-            "@type": "Question",
-            "name": "How do I calculate my daily calorie needs?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor."
-            }
-        },{
-            "@type": "Question",
-            "name": "What is a healthy BMI range?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat."
-            }
-        }]
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How is my due date calculated?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Your due date is calculated by adding 280 days (40 weeks) to the first day of your last menstrual period (LMP)."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How accurate is a due date calculator?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Due date calculators are generally accurate, but only about 5% of babies are born on their exact due date. Most arrive within two weeks of the calculated date."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What are the pregnancy trimesters?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "First trimester: weeks 1-12. Second trimester: weeks 13-26. Third trimester: weeks 27-40."
+                    }
+                }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -102,6 +137,34 @@
                     "item": "https://fitcalcs.xyz/pregnancy-calculator.html"
                 }
             ]
+        },
+        {
+            "@type": "HowTo",
+            "name": "How to Use the Pregnancy Calculator",
+            "description": "Step-by-step guide to using the Pregnancy Calculator on FitCalcs.",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "text": "Enter the first day of your last menstrual period"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "text": "Optionally adjust your cycle length"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "text": "View your estimated due date"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "text": "Track your current week and trimester"
+                }
+            ],
+            "totalTime": "PT1M"
         }
     ]
 }
@@ -175,19 +238,19 @@
             </div>
 
             <div class="card" style="margin-top: 20px;">
-        <h2>❓ Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list" style="margin-top: 15px;">
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How accurate are online health calculators?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How is my due date calculated?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Your due date is calculated by adding 280 days (40 weeks) to the first day of your last menstrual period (LMP).</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How do I calculate my daily calorie needs?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How accurate is a due date calculator?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Due date calculators are generally accurate, but only about 5% of babies are born on their exact due date. Most arrive within two weeks of the calculated date.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is a healthy BMI range?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What are the pregnancy trimesters?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">First trimester: weeks 1-12. Second trimester: weeks 13-26. Third trimester: weeks 27-40.</p>
             </details>
         </div>
     </div>

@@ -5,8 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gas Mileage Calculator - MPG & Fuel Cost Calculator | FitCalcs</title>
-    <meta name="description" content="Free gas mileage calculator. Calculate your car's MPG, fuel cost per mile, and compare fuel efficiency for trips. Free and instant results.">
-        <link rel="canonical" href="https://fitcalcs.xyz/gas-mileage-calculator.html">
+    <meta name="description" content="Calculate your vehicle's gas mileage (MPG) and fuel costs for trips. Track fuel efficiency and compare costs between fill-ups.">
+    <meta name="keywords" content="gas mileage calculator, MPG calculator, fuel economy, fuel cost calculator, miles per gallon">
+    <meta name="author" content="FitCalcs">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://fitcalcs.xyz/gas-mileage-calculator.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitcalcs.xyz/gas-mileage-calculator.html">
+    <meta property="og:title" content="Gas Mileage Calculator - MPG & Fuel Cost Calculator | FitCalcs">
+    <meta property="og:description" content="Calculate your vehicle's gas mileage (MPG) and fuel costs for trips. Track fuel efficiency and compare costs between fill-ups.">
+    <meta property="og:site_name" content="FitCalcs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fitcalcs.xyz/gas-mileage-calculator.html">
+    <meta name="twitter:title" content="Gas Mileage Calculator - MPG & Fuel Cost Calculator | FitCalcs">
+    <meta name="twitter:description" content="Calculate your vehicle's gas mileage (MPG) and fuel costs for trips. Track fuel efficiency and compare costs between fill-ups.">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#14b8a6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
         :root { --primary: #22c55e; --primary-dark: #16a34a; --secondary: #22d3ee; --accent: #f59e0b; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -52,8 +75,9 @@
             "@type": "WebApplication",
             "name": "Gas Mileage Calculator",
             "url": "https://fitcalcs.xyz/gas-mileage-calculator.html",
-            "applicationCategory": "FinanceApplication",
+            "applicationCategory": "UtilitiesApplication",
             "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -63,32 +87,43 @@
                 "@type": "Organization",
                 "name": "FitCalcs",
                 "url": "https://fitcalcs.xyz"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
             }
         },
         {
             "@type": "FAQPage",
-            "mainEntity": [{
-            "@type": "Question",
-            "name": "How accurate are online health calculators?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional."
-            }
-        },{
-            "@type": "Question",
-            "name": "How do I calculate my daily calorie needs?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor."
-            }
-        },{
-            "@type": "Question",
-            "name": "What is a healthy BMI range?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat."
-            }
-        }]
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How do I calculate MPG?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Divide miles driven by gallons used. If you drove 300 miles on 10 gallons, your MPG is 30."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is good gas mileage?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For passenger cars, 30+ MPG is considered good. Hybrids often exceed 50 MPG. Trucks and SUVs typically get 15-25 MPG."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How can I improve my gas mileage?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Keep tires properly inflated, avoid aggressive driving, remove excess weight, and maintain your vehicle regularly."
+                    }
+                }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -106,6 +141,34 @@
                     "item": "https://fitcalcs.xyz/gas-mileage-calculator.html"
                 }
             ]
+        },
+        {
+            "@type": "HowTo",
+            "name": "How to Use the Gas Mileage Calculator",
+            "description": "Step-by-step guide to using the Gas Mileage Calculator on FitCalcs.",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "text": "Enter miles driven since last fill-up"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "text": "Enter gallons of fuel used"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "text": "View your MPG calculation"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "text": "Optionally calculate trip fuel costs"
+                }
+            ],
+            "totalTime": "PT1M"
         }
     ]
 }

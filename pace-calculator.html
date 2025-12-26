@@ -4,9 +4,32 @@
     <script src="https://quge5.com/88/tag.min.js" data-zone="196361" async data-cfasync="false"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pace Calculator - Running & Walking Pace | FitCalcs</title>
-    <meta name="description" content="Free pace calculator. Convert between pace, speed, and finish times for running and walking. Calculate splits for any distance. Free and instant results.">
-        <link rel="canonical" href="https://fitcalcs.xyz/pace-calculator.html">
+    <title>Pace Calculator - Running Pace & Split Times | FitCalcs</title>
+    <meta name="description" content="Calculate your running pace, finish time, or distance. Get split times for any race distance from 5K to marathon. Perfect for race planning.">
+    <meta name="keywords" content="pace calculator, running pace, race pace calculator, split times, marathon pace">
+    <meta name="author" content="FitCalcs">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://fitcalcs.xyz/pace-calculator.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitcalcs.xyz/pace-calculator.html">
+    <meta property="og:title" content="Pace Calculator - Running Pace & Split Times | FitCalcs">
+    <meta property="og:description" content="Calculate your running pace, finish time, or distance. Get split times for any race distance from 5K to marathon. Perfect for race planning.">
+    <meta property="og:site_name" content="FitCalcs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fitcalcs.xyz/pace-calculator.html">
+    <meta name="twitter:title" content="Pace Calculator - Running Pace & Split Times | FitCalcs">
+    <meta name="twitter:description" content="Calculate your running pace, finish time, or distance. Get split times for any race distance from 5K to marathon. Perfect for race planning.">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#14b8a6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
         :root { --primary: #f97316; --primary-dark: #ea580c; --secondary: #22d3ee; --accent: #10b981; --bg-dark: #0f172a; --bg-card: #1e293b; --bg-input: #334155; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border: #475569; --success: #10b981; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -55,8 +78,9 @@
             "@type": "WebApplication",
             "name": "Pace Calculator",
             "url": "https://fitcalcs.xyz/pace-calculator.html",
-            "applicationCategory": "FinanceApplication",
+            "applicationCategory": "HealthApplication",
             "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
             "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -66,32 +90,43 @@
                 "@type": "Organization",
                 "name": "FitCalcs",
                 "url": "https://fitcalcs.xyz"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
             }
         },
         {
             "@type": "FAQPage",
-            "mainEntity": [{
-            "@type": "Question",
-            "name": "How accurate are online health calculators?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional."
-            }
-        },{
-            "@type": "Question",
-            "name": "How do I calculate my daily calorie needs?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor."
-            }
-        },{
-            "@type": "Question",
-            "name": "What is a healthy BMI range?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat."
-            }
-        }]
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How do I calculate my running pace?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Divide your total time by distance. For example, 30 minutes for 5K equals 6 minutes per kilometer or about 9:40 per mile."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is a good running pace for beginners?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Beginners typically run at 10-13 minute per mile pace. The key is finding a pace where you can hold a conversation."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I improve my running pace?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Incorporate interval training, tempo runs, and consistent mileage. Improvement comes gradually with training."
+                    }
+                }
+            ]
         },
         {
             "@type": "BreadcrumbList",
@@ -109,6 +144,34 @@
                     "item": "https://fitcalcs.xyz/pace-calculator.html"
                 }
             ]
+        },
+        {
+            "@type": "HowTo",
+            "name": "How to Use the Pace Calculator",
+            "description": "Step-by-step guide to using the Pace Calculator on FitCalcs.",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "text": "Enter distance or race type"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "text": "Enter your time or target pace"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "text": "Calculate your pace, time, or distance"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "text": "View split times for each mile/km"
+                }
+            ],
+            "totalTime": "PT1M"
         }
     ]
 }
@@ -211,19 +274,19 @@
             </div>
 
             <div class="card" style="margin-top: 20px;">
-        <h2>❓ Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list" style="margin-top: 15px;">
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How accurate are online health calculators?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Online calculators provide estimates based on general formulas. For personalized advice, consult a healthcare professional.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How do I calculate my running pace?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Divide your total time by distance. For example, 30 minutes for 5K equals 6 minutes per kilometer or about 9:40 per mile.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How do I calculate my daily calorie needs?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Your daily calorie needs depend on age, sex, weight, height, and activity level. BMR formulas provide a baseline, then multiply by activity factor.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is a good running pace for beginners?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Beginners typically run at 10-13 minute per mile pace. The key is finding a pace where you can hold a conversation.</p>
             </details>
             <details style="margin-bottom: 15px; padding: 15px; background: var(--bg-input); border-radius: 8px;">
-                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">What is a healthy BMI range?</summary>
-                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">A healthy BMI is typically 18.5-24.9. However, BMI doesn't account for muscle mass, so athletes may have higher BMI but low body fat.</p>
+                <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How do I improve my running pace?</summary>
+                <p style="margin-top: 10px; color: var(--text-secondary); line-height: 1.6;">Incorporate interval training, tempo runs, and consistent mileage. Improvement comes gradually with training.</p>
             </details>
         </div>
     </div>

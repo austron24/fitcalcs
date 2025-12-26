@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitCalcs - Free Health & Fitness Calculators</title>
-    <meta name="description" content="Free health and fitness calculators. Calculate BMI, calories, macros, and more for your wellness journey.">
+    <title>FitCalcs - 62 Free Health & Fitness Calculators | BMI, Calories, Macros & More</title>
+    <meta name="description" content="Free online health and fitness calculators. Calculate BMI, daily calories, macros, TDEE, body fat, pregnancy due date, and more. No signup required. 100% free.">
+    <meta name="keywords" content="health calculator, fitness calculator, BMI calculator, calorie calculator, macro calculator, TDEE calculator, body fat calculator, pregnancy calculator, free online calculators">
+    <meta name="author" content="FitCalcs">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://fitcalcs.xyz/">
-    <meta property="og:title" content="FitCalcs - Free Health & Fitness Calculators">
-    <meta property="og:description" content="Free health and fitness calculators. Calculate BMI, calories, macros, and more for your wellness journey.">
-    <meta property="og:url" content="https://fitcalcs.xyz/">
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fitcalcs.xyz/">
+    <meta property="og:title" content="FitCalcs - 62 Free Health & Fitness Calculators">
+    <meta property="og:description" content="Free online health and fitness calculators. Calculate BMI, daily calories, macros, TDEE, body fat, pregnancy due date, and more. No signup required.">
+    <meta property="og:site_name" content="FitCalcs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fitcalcs.xyz/">
+    <meta name="twitter:title" content="FitCalcs - 62 Free Health & Fitness Calculators">
+    <meta name="twitter:description" content="Free online health and fitness calculators. Calculate BMI, daily calories, macros, TDEE, body fat, pregnancy due date, and more.">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#ea580c">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -38,17 +58,19 @@
             background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
         }
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             background: linear-gradient(90deg, #ea580c, #fff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         .hero p {
             font-size: 1.25rem;
             color: #94a3b8;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
+            line-height: 1.6;
         }
         .search-box {
             max-width: 500px;
@@ -68,13 +90,27 @@
         .search-box input:focus {
             border-color: #ea580c;
         }
+        .search-box input::placeholder {
+            color: #64748b;
+        }
+        .category-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .category-title {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: #ea580c;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 1rem;
-            padding: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
+            padding: 0 0 2rem;
         }
         .tool-card {
             background: rgba(255,255,255,0.05);
@@ -95,14 +131,20 @@
         }
         .tool-icon {
             font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
         }
         .tool-name {
             font-weight: 500;
         }
         .stats {
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem 2rem;
             color: #94a3b8;
+            font-size: 1.1rem;
+        }
+        .stats strong {
+            color: #ea580c;
         }
         .ad-banner {
             text-align: center;
@@ -117,11 +159,74 @@
             color: #64748b;
             margin-top: 2rem;
         }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            color: #ea580c;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .category-title { font-size: 1.25rem; }
+        }
     </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "FitCalcs",
+                "url": "https://fitcalcs.xyz/",
+                "description": "Free online health and fitness calculators for BMI, calories, macros, and more.",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://fitcalcs.xyz/?search={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "Organization",
+                "name": "FitCalcs",
+                "url": "https://fitcalcs.xyz/",
+                "logo": "https://fitcalcs.xyz/logo.png"
+            },
+            {
+                "@type": "ItemList",
+                "name": "Health & Fitness Calculators",
+                "description": "Collection of free online health and fitness calculators",
+                "numberOfItems": 62,
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "BMI Calculator", "url": "https://fitcalcs.xyz/bmi-calculator.html"},
+                    {"@type": "ListItem", "position": 2, "name": "Calorie Calculator", "url": "https://fitcalcs.xyz/calorie-calculator.html"},
+                    {"@type": "ListItem", "position": 3, "name": "TDEE Calculator", "url": "https://fitcalcs.xyz/tdee-calculator.html"},
+                    {"@type": "ListItem", "position": 4, "name": "Macro Calculator", "url": "https://fitcalcs.xyz/macro-calculator.html"},
+                    {"@type": "ListItem", "position": 5, "name": "Body Fat Calculator", "url": "https://fitcalcs.xyz/body-fat-calculator.html"},
+                    {"@type": "ListItem", "position": 6, "name": "Ideal Weight Calculator", "url": "https://fitcalcs.xyz/ideal-weight-calculator.html"},
+                    {"@type": "ListItem", "position": 7, "name": "Protein Calculator", "url": "https://fitcalcs.xyz/protein-intake-calculator.html"},
+                    {"@type": "ListItem", "position": 8, "name": "Keto Calculator", "url": "https://fitcalcs.xyz/keto-calculator.html"},
+                    {"@type": "ListItem", "position": 9, "name": "Pregnancy Calculator", "url": "https://fitcalcs.xyz/pregnancy-calculator.html"},
+                    {"@type": "ListItem", "position": 10, "name": "Sleep Calculator", "url": "https://fitcalcs.xyz/sleep-calculator.html"}
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <header class="header">
-        <a href="/" class="logo">FitCalcs</a>
+        <a href="/" class="logo" aria-label="FitCalcs Home">FitCalcs</a>
         <span>62 Free Calculators</span>
     </header>
 
@@ -133,266 +238,305 @@
 
     <section class="hero">
         <h1>Free Health & Fitness Calculators</h1>
-        <p>Free health and fitness calculators. Calculate BMI, calories, macros, and more for your wellness journey.</p>
+        <p>Calculate BMI, daily calories, macros, TDEE, body fat percentage, pregnancy due dates, and more. All calculators are 100% free with instant results. No signup required.</p>
         <div class="search-box">
-            <input type="text" id="search" placeholder="Search 62 calculators..." onkeyup="filterTools()">
+            <label for="search" class="visually-hidden" style="position:absolute;left:-9999px;">Search calculators</label>
+            <input type="text" id="search" placeholder="Search 62 calculators..." onkeyup="filterTools()" aria-label="Search calculators">
         </div>
     </section>
 
     <div class="stats">
-        <strong>62</strong> free calculators • No signup required • 100% free
+        <strong>62</strong> free calculators | No signup required | 100% free | Instant results
     </div>
 
-    <main class="tools-grid" id="tools-grid">
-        
-            <a href="age-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Age Calculator</span>
-            </a>
-            <a href="alcohol-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Alcohol Calculator</span>
-            </a>
-            <a href="average-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Average Calculator</span>
-            </a>
-            <a href="baby-age-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Baby Age Calculator</span>
-            </a>
-            <a href="baby-due-date-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Baby Due Date Calculator</span>
-            </a>
-            <a href="baby-due-date-countdown.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Baby Due Date Countdown</span>
-            </a>
-            <a href="baby-formula-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Baby Formula Calculator</span>
-            </a>
-            <a href="baby-weight-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Baby Weight Calculator</span>
-            </a>
-            <a href="bac-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Bac Calculator</span>
-            </a>
-            <a href="blood-alcohol-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Blood Alcohol Calculator</span>
-            </a>
-            <a href="blood-pressure-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Blood Pressure Calculator</span>
-            </a>
+    <main class="category-section">
+        <!-- Health & Body Calculators -->
+        <h2 class="category-title">Health & Body Calculators</h2>
+        <div class="tools-grid" id="health-tools">
             <a href="bmi-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Bmi Calculator</span>
+                <span class="tool-icon">⚖️</span>
+                <span class="tool-name">BMI Calculator</span>
             </a>
             <a href="body-fat-calculator.html" class="tool-card">
                 <span class="tool-icon">📊</span>
                 <span class="tool-name">Body Fat Calculator</span>
             </a>
-            <a href="caffeine-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Caffeine Calculator</span>
+            <a href="ideal-weight-calculator.html" class="tool-card">
+                <span class="tool-icon">🎯</span>
+                <span class="tool-name">Ideal Weight Calculator</span>
             </a>
-            <a href="calorie-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Calorie Calculator</span>
+            <a href="waist-hip-ratio-calculator.html" class="tool-card">
+                <span class="tool-icon">📏</span>
+                <span class="tool-name">Waist Hip Ratio Calculator</span>
             </a>
-            <a href="cat-age-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Cat Age Calculator</span>
-            </a>
-            <a href="cycling-calories-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Cycling Calories Calculator</span>
-            </a>
-            <a href="dog-age-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Dog Age Calculator</span>
-            </a>
-            <a href="dog-food-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Dog Food Calculator</span>
-            </a>
-            <a href="dog-food-cost-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Dog Food Cost Calculator</span>
-            </a>
-            <a href="dog-weight-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Dog Weight Calculator</span>
-            </a>
-            <a href="due-date-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Due Date Calculator</span>
-            </a>
-            <a href="fasting-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Fasting Calculator</span>
-            </a>
-            <a href="gas-mileage-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Gas Mileage Calculator</span>
-            </a>
-            <a href="health-check.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Health Check</span>
+            <a href="blood-pressure-calculator.html" class="tool-card">
+                <span class="tool-icon">❤️</span>
+                <span class="tool-name">Blood Pressure Calculator</span>
             </a>
             <a href="heart-rate-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
+                <span class="tool-icon">💓</span>
                 <span class="tool-name">Heart Rate Calculator</span>
             </a>
             <a href="heart-rate-zone-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
+                <span class="tool-icon">🏃</span>
                 <span class="tool-name">Heart Rate Zone Calculator</span>
             </a>
-            <a href="ideal-weight-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Ideal Weight Calculator</span>
+            <a href="age-calculator.html" class="tool-card">
+                <span class="tool-icon">🎂</span>
+                <span class="tool-name">Age Calculator</span>
             </a>
-            <a href="image-compressor.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Image Compressor</span>
+            <a href="health-check.html" class="tool-card">
+                <span class="tool-icon">🩺</span>
+                <span class="tool-name">Health Check</span>
             </a>
-            <a href="image-resizer.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Image Resizer</span>
+        </div>
+
+        <!-- Nutrition & Diet Calculators -->
+        <h2 class="category-title">Nutrition & Diet Calculators</h2>
+        <div class="tools-grid" id="nutrition-tools">
+            <a href="calorie-calculator.html" class="tool-card">
+                <span class="tool-icon">🔥</span>
+                <span class="tool-name">Calorie Calculator</span>
             </a>
-            <a href="intermittent-fasting-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Intermittent Fasting Calculator</span>
-            </a>
-            <a href="keto-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Keto Calculator</span>
+            <a href="tdee-calculator.html" class="tool-card">
+                <span class="tool-icon">⚡</span>
+                <span class="tool-name">TDEE Calculator</span>
             </a>
             <a href="macro-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
+                <span class="tool-icon">🥗</span>
                 <span class="tool-name">Macro Calculator</span>
             </a>
             <a href="macronutrient-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
+                <span class="tool-icon">🍽️</span>
                 <span class="tool-name">Macronutrient Calculator</span>
             </a>
-            <a href="net-carbs-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Net Carbs Calculator</span>
-            </a>
-            <a href="one-rep-max-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">One Rep Max Calculator</span>
-            </a>
-            <a href="ovulation-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Ovulation Calculator</span>
-            </a>
-            <a href="pace-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Pace Calculator</span>
-            </a>
-            <a href="percentage-calc.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Percentage Calc</span>
-            </a>
-            <a href="percentage-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Percentage Calculator</span>
-            </a>
-            <a href="pet-age-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Pet Age Calculator</span>
-            </a>
-            <a href="pet-food-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Pet Food Calculator</span>
-            </a>
-            <a href="pet-insurance-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Pet Insurance Calculator</span>
-            </a>
-            <a href="pregnancy-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Pregnancy Calculator</span>
-            </a>
-            <a href="pregnancy-due-date-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Pregnancy Due Date Calculator</span>
-            </a>
-            <a href="pregnancy-weight-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Pregnancy Weight Calculator</span>
-            </a>
-            <a href="pregnancy-weight-gain-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Pregnancy Weight Gain Calculator</span>
-            </a>
             <a href="protein-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
+                <span class="tool-icon">💪</span>
                 <span class="tool-name">Protein Calculator</span>
             </a>
             <a href="protein-intake-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
+                <span class="tool-icon">🥩</span>
                 <span class="tool-name">Protein Intake Calculator</span>
             </a>
-            <a href="running-pace-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Running Pace Calculator</span>
+            <a href="keto-calculator.html" class="tool-card">
+                <span class="tool-icon">🥑</span>
+                <span class="tool-name">Keto Calculator</span>
             </a>
-            <a href="sleep-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Sleep Calculator</span>
+            <a href="net-carbs-calculator.html" class="tool-card">
+                <span class="tool-icon">🍞</span>
+                <span class="tool-name">Net Carbs Calculator</span>
             </a>
-            <a href="sleep-debt-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Sleep Debt Calculator</span>
+            <a href="water-intake-calculator.html" class="tool-card">
+                <span class="tool-icon">💧</span>
+                <span class="tool-name">Water Intake Calculator</span>
             </a>
-            <a href="square-footage.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Square Footage</span>
+            <a href="caffeine-calculator.html" class="tool-card">
+                <span class="tool-icon">☕</span>
+                <span class="tool-name">Caffeine Calculator</span>
             </a>
-            <a href="square-footage-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Square Footage Calculator</span>
+        </div>
+
+        <!-- Weight Loss & Fasting -->
+        <h2 class="category-title">Weight Loss & Fasting Calculators</h2>
+        <div class="tools-grid" id="weight-tools">
+            <a href="weight-loss-calculator.html" class="tool-card">
+                <span class="tool-icon">📉</span>
+                <span class="tool-name">Weight Loss Calculator</span>
             </a>
-            <a href="swimming-calories-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Swimming Calories Calculator</span>
+            <a href="fasting-calculator.html" class="tool-card">
+                <span class="tool-icon">⏰</span>
+                <span class="tool-name">Fasting Calculator</span>
             </a>
-            <a href="tdee-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Tdee Calculator</span>
+            <a href="intermittent-fasting-calculator.html" class="tool-card">
+                <span class="tool-icon">🕐</span>
+                <span class="tool-name">Intermittent Fasting Calculator</span>
             </a>
-            <a href="waist-hip-ratio-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Waist Hip Ratio Calculator</span>
+        </div>
+
+        <!-- Fitness & Exercise Calculators -->
+        <h2 class="category-title">Fitness & Exercise Calculators</h2>
+        <div class="tools-grid" id="fitness-tools">
+            <a href="one-rep-max-calculator.html" class="tool-card">
+                <span class="tool-icon">🏋️</span>
+                <span class="tool-name">One Rep Max Calculator</span>
+            </a>
+            <a href="workout-calorie-calculator.html" class="tool-card">
+                <span class="tool-icon">🔥</span>
+                <span class="tool-name">Workout Calorie Calculator</span>
             </a>
             <a href="walking-calorie-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
+                <span class="tool-icon">🚶</span>
                 <span class="tool-name">Walking Calorie Calculator</span>
             </a>
             <a href="walking-calories-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
+                <span class="tool-icon">👟</span>
                 <span class="tool-name">Walking Calories Calculator</span>
             </a>
-            <a href="water-intake-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Water Intake Calculator</span>
+            <a href="running-pace-calculator.html" class="tool-card">
+                <span class="tool-icon">🏃</span>
+                <span class="tool-name">Running Pace Calculator</span>
             </a>
-            <a href="weight-loss-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Weight Loss Calculator</span>
+            <a href="pace-calculator.html" class="tool-card">
+                <span class="tool-icon">⏱️</span>
+                <span class="tool-name">Pace Calculator</span>
             </a>
-            <a href="workout-calorie-calculator.html" class="tool-card">
-                <span class="tool-icon">📊</span>
-                <span class="tool-name">Workout Calorie Calculator</span>
+            <a href="cycling-calories-calculator.html" class="tool-card">
+                <span class="tool-icon">🚴</span>
+                <span class="tool-name">Cycling Calories Calculator</span>
             </a>
+            <a href="swimming-calories-calculator.html" class="tool-card">
+                <span class="tool-icon">🏊</span>
+                <span class="tool-name">Swimming Calories Calculator</span>
+            </a>
+        </div>
+
+        <!-- Sleep & Wellness -->
+        <h2 class="category-title">Sleep & Wellness Calculators</h2>
+        <div class="tools-grid" id="sleep-tools">
+            <a href="sleep-calculator.html" class="tool-card">
+                <span class="tool-icon">😴</span>
+                <span class="tool-name">Sleep Calculator</span>
+            </a>
+            <a href="sleep-debt-calculator.html" class="tool-card">
+                <span class="tool-icon">🛏️</span>
+                <span class="tool-name">Sleep Debt Calculator</span>
+            </a>
+            <a href="alcohol-calculator.html" class="tool-card">
+                <span class="tool-icon">🍺</span>
+                <span class="tool-name">Alcohol Calculator</span>
+            </a>
+            <a href="bac-calculator.html" class="tool-card">
+                <span class="tool-icon">🍷</span>
+                <span class="tool-name">BAC Calculator</span>
+            </a>
+            <a href="blood-alcohol-calculator.html" class="tool-card">
+                <span class="tool-icon">🍻</span>
+                <span class="tool-name">Blood Alcohol Calculator</span>
+            </a>
+        </div>
+
+        <!-- Pregnancy & Baby Calculators -->
+        <h2 class="category-title">Pregnancy & Baby Calculators</h2>
+        <div class="tools-grid" id="pregnancy-tools">
+            <a href="pregnancy-calculator.html" class="tool-card">
+                <span class="tool-icon">🤰</span>
+                <span class="tool-name">Pregnancy Calculator</span>
+            </a>
+            <a href="due-date-calculator.html" class="tool-card">
+                <span class="tool-icon">📅</span>
+                <span class="tool-name">Due Date Calculator</span>
+            </a>
+            <a href="pregnancy-due-date-calculator.html" class="tool-card">
+                <span class="tool-icon">👶</span>
+                <span class="tool-name">Pregnancy Due Date Calculator</span>
+            </a>
+            <a href="ovulation-calculator.html" class="tool-card">
+                <span class="tool-icon">🌸</span>
+                <span class="tool-name">Ovulation Calculator</span>
+            </a>
+            <a href="pregnancy-weight-calculator.html" class="tool-card">
+                <span class="tool-icon">⚖️</span>
+                <span class="tool-name">Pregnancy Weight Calculator</span>
+            </a>
+            <a href="pregnancy-weight-gain-calculator.html" class="tool-card">
+                <span class="tool-icon">📈</span>
+                <span class="tool-name">Pregnancy Weight Gain Calculator</span>
+            </a>
+            <a href="baby-due-date-calculator.html" class="tool-card">
+                <span class="tool-icon">🍼</span>
+                <span class="tool-name">Baby Due Date Calculator</span>
+            </a>
+            <a href="baby-due-date-countdown.html" class="tool-card">
+                <span class="tool-icon">⏳</span>
+                <span class="tool-name">Baby Due Date Countdown</span>
+            </a>
+            <a href="baby-age-calculator.html" class="tool-card">
+                <span class="tool-icon">👶</span>
+                <span class="tool-name">Baby Age Calculator</span>
+            </a>
+            <a href="baby-weight-calculator.html" class="tool-card">
+                <span class="tool-icon">👣</span>
+                <span class="tool-name">Baby Weight Calculator</span>
+            </a>
+            <a href="baby-formula-calculator.html" class="tool-card">
+                <span class="tool-icon">🍼</span>
+                <span class="tool-name">Baby Formula Calculator</span>
+            </a>
+        </div>
+
+        <!-- Pet Calculators -->
+        <h2 class="category-title">Pet Calculators</h2>
+        <div class="tools-grid" id="pet-tools">
+            <a href="dog-age-calculator.html" class="tool-card">
+                <span class="tool-icon">🐕</span>
+                <span class="tool-name">Dog Age Calculator</span>
+            </a>
+            <a href="cat-age-calculator.html" class="tool-card">
+                <span class="tool-icon">🐱</span>
+                <span class="tool-name">Cat Age Calculator</span>
+            </a>
+            <a href="pet-age-calculator.html" class="tool-card">
+                <span class="tool-icon">🐾</span>
+                <span class="tool-name">Pet Age Calculator</span>
+            </a>
+            <a href="dog-food-calculator.html" class="tool-card">
+                <span class="tool-icon">🦴</span>
+                <span class="tool-name">Dog Food Calculator</span>
+            </a>
+            <a href="dog-food-cost-calculator.html" class="tool-card">
+                <span class="tool-icon">💰</span>
+                <span class="tool-name">Dog Food Cost Calculator</span>
+            </a>
+            <a href="dog-weight-calculator.html" class="tool-card">
+                <span class="tool-icon">⚖️</span>
+                <span class="tool-name">Dog Weight Calculator</span>
+            </a>
+            <a href="pet-food-calculator.html" class="tool-card">
+                <span class="tool-icon">🥣</span>
+                <span class="tool-name">Pet Food Calculator</span>
+            </a>
+            <a href="pet-insurance-calculator.html" class="tool-card">
+                <span class="tool-icon">🏥</span>
+                <span class="tool-name">Pet Insurance Calculator</span>
+            </a>
+        </div>
+
+        <!-- Utility Calculators -->
+        <h2 class="category-title">Utility Calculators</h2>
+        <div class="tools-grid" id="utility-tools">
+            <a href="percentage-calculator.html" class="tool-card">
+                <span class="tool-icon">%</span>
+                <span class="tool-name">Percentage Calculator</span>
+            </a>
+            <a href="percentage-calc.html" class="tool-card">
+                <span class="tool-icon">📱</span>
+                <span class="tool-name">Percentage Calc</span>
+            </a>
+            <a href="average-calculator.html" class="tool-card">
+                <span class="tool-icon">➗</span>
+                <span class="tool-name">Average Calculator</span>
+            </a>
+            <a href="square-footage-calculator.html" class="tool-card">
+                <span class="tool-icon">📐</span>
+                <span class="tool-name">Square Footage Calculator</span>
+            </a>
+            <a href="square-footage.html" class="tool-card">
+                <span class="tool-icon">🏠</span>
+                <span class="tool-name">Square Footage</span>
+            </a>
+            <a href="gas-mileage-calculator.html" class="tool-card">
+                <span class="tool-icon">⛽</span>
+                <span class="tool-name">Gas Mileage Calculator</span>
+            </a>
+            <a href="image-resizer.html" class="tool-card">
+                <span class="tool-icon">🖼️</span>
+                <span class="tool-name">Image Resizer</span>
+            </a>
+            <a href="image-compressor.html" class="tool-card">
+                <span class="tool-icon">📸</span>
+                <span class="tool-name">Image Compressor</span>
+            </a>
+        </div>
     </main>
 
     <!-- Bottom Ad -->
@@ -402,7 +546,14 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; 2025 FitCalcs. All calculators are free to use.</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="bmi-calculator.html">BMI Calculator</a>
+            <a href="calorie-calculator.html">Calorie Calculator</a>
+            <a href="tdee-calculator.html">TDEE Calculator</a>
+            <a href="macro-calculator.html">Macro Calculator</a>
+            <a href="pregnancy-calculator.html">Pregnancy Calculator</a>
+        </nav>
+        <p>&copy; 2025 FitCalcs. All calculators are free to use. No signup required.</p>
     </footer>
 
     <script>
@@ -412,6 +563,15 @@
             cards.forEach(card => {
                 const name = card.querySelector('.tool-name').textContent.toLowerCase();
                 card.style.display = name.includes(search) ? 'flex' : 'none';
+            });
+            // Show/hide category titles based on visible cards
+            document.querySelectorAll('.category-title').forEach(title => {
+                const grid = title.nextElementSibling;
+                const visibleCards = grid.querySelectorAll('.tool-card[style="display: flex;"], .tool-card:not([style])');
+                const hasVisible = Array.from(grid.querySelectorAll('.tool-card')).some(card =>
+                    card.style.display !== 'none'
+                );
+                title.style.display = hasVisible ? 'flex' : 'none';
             });
         }
     </script>
